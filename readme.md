@@ -1,10 +1,10 @@
 # SOS Puntarenas
 
 ### 👩‍💻 Autor
-**Nombre:** Laura Montero Carvajal 
-**Curso:** Desarrollo de Aplicaciones para Dispositivos Móviles
-**Profesor:** Ever Barahona Mendoza
-**Año:** 2025  
+- **Nombre:** Laura Montero Carvajal 
+- **Curso:** Desarrollo de Aplicaciones para Dispositivos Móviles
+- **Profesor:** Ever Barahona Mendoza
+- **Año:** 2025  
 
 
 ### Descripción general
@@ -54,10 +54,12 @@ Está diseñada para ser intuitiva, rápida y de fácil acceso en cualquier mome
 
 #### Venatana emergente
 Aparece luego de solicitar el enlace de recuperación de contraseña.
+
 ![alt text](Mockups/image-10.png)
 
 #### Pantalla 9: Cambiar Contraseña
 La siguiente pantalla aparece al abrir el enlace que se recibició al correo luego de pedir el enlace de recuperación de contraseña o bien también aparece directamente luego de tocar el botón de "Cambiar contraseña" ubicado en la pantalla de configuración.
+
 ![alt text](Mockups/image-8.png)
 
 ---
