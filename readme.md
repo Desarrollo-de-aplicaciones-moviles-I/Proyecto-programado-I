@@ -28,36 +28,36 @@ Está diseñada para ser intuitiva, rápida y de fácil acceso en cualquier mome
 > Los siguientes mockups muestran las pantallas principales de la app.  
 
 #### Pantalla 1: Inicio de Sesión
-![alt text](image-1.png)
+![alt text](Mockups\image-1.png)
 
 #### Pantalla 2: Registro de Usuario
-![alt text](image-2.png)
+![alt text](Mockups\image-2.png)
 
 #### Pantalla 3: Menú Principal
-![alt text](image-3.png)
+![alt text](Mockups\image-3.png)
 
 #### Pantalla 4: Alerta SOS
-![alt text](image-4.png)
+![alt text](Mockups\image-4.png)
 
 #### Pantalla 5: Contactos de Emergencia
-![alt text](image-5.png)
+![alt text](Mockups\image-5.png)
 
 #### Pantalla 6: Historial de Alertas
-![alt text](image-6.png)
+![alt text](Mockups\image-6.png)
 
 #### Pantalla 7: Configuración
-![alt text](image-7.png)
+![alt text](Mockups\image-7.png)
 
 #### Pantalla 8: Obtener enlace de recuperación
-![alt text](image-9.png)
+![alt text](Mockups\image-9.png)
 
 #### Venatana emergente
 Aparece luego de solicitar el enlace de recuperación de contraseña.
-![alt text](image-10.png)
+![alt text](Mockups\image-10.png)
 
 #### Pantalla 9: Cambiar Contraseña
 La siguiente pantalla aparece al abrir el enlace que se recibició al correo luego de pedir el enlace de recuperación de contraseña o bien también aparece directamente luego de tocar el botón de "Cambiar contraseña" ubicado en la pantalla de configuración.
-![alt text](image-8.png)
+![alt text](Mockups\image-8.png)
 
 ---
 
