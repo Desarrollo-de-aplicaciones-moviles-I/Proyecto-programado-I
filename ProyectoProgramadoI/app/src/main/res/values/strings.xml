@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ProyectoProgramadoI</string>
+    <string name="ErrorMsgAddU">Error al crear el nuevo usuario</string>
+    <string name="ErrorMsgUpdPass">Error al cambiar la contraseña</string>
+    <string name="ErrorMsgUpdEmai">Error al cambiar el correo</string>
+    <string name="ErrorMsgAddC">Error al añadir el nuevo contactp</string>
+    <string name="ErrorMsgUpdC">Error al actulizar datos del contacto</string>
+    <string name="ErrorMsgRemoveC">Erro al eliminar el contacto</string>
+    <string name="ErrorMsgGetC">Error al obtener contactos</string>
+    <string name="ErrorMsgAddA">Error al añadir la alerta</string>
+    <string name="ErrorMsgGetA">Error al obtener las alertas</string>
+</resources>

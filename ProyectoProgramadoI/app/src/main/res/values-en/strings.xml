@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ProyectoProgramadoI</string>
+    <string name="ErrorMsgAddU">Error when creating the new user</string>
+    <string name="ErrorMsgUpdPass">Error when changing the password</string>
+    <string name="ErrorMsgUpdEmai">Error when changing the email</string>
+    <string name="ErrorMsgAddC">Error when adding the new contact</string>
+    <string name="ErrorMsgUpdC">Error when updating contact data</string>
+    <string name="ErrorMsgRemoveC">Error when removing the contact</string>
+    <string name="ErrorMsgGetC">Error when getting the contacts</string>
+    <string name="ErrorMsgAddA">Error when adding the alert</string>
+    <string name="ErrorMsgGetA">Error when getting the alerts</string>
+</resources>
