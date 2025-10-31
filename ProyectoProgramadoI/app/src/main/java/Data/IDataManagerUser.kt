@@ -1,10 +1,10 @@
 package Data
 
 import Entity.User
+import android.content.Context
 
 interface IDataManagerUser {
-    fun addUser(usuario: User)
-    fun updatePassword(userId: Int, newPassword: String)
-    fun updateEmail(userId: Int, newEmail: String)
+    fun addUser(user: User)
+    fun updatePassword(context: Context, userId: Int, newPassword: String)
 
 }

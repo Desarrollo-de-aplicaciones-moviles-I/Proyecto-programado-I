@@ -3,9 +3,9 @@ package Data
 import Entity.EmergencyContact
 
 interface IDataManagerContact {
-    fun addContact(contacto: EmergencyContact)
-    fun updateContact(contacto: EmergencyContact)
+    fun addContact(contact: EmergencyContact)
+    fun updateContact(contact: EmergencyContact)
     fun removeContact(id: Int)
-    fun getEContactsByUser(idUsuario: Int): List<EmergencyContact>
+    fun getEContactsByUser(idUser: Int): List<EmergencyContact>
 
 }

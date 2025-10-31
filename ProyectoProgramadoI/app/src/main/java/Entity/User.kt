@@ -6,14 +6,13 @@ class User {
     private var id: Int=0
     private var name: String=""
     private var fLastName: String=""
-    private var correo: String=""
-    private var contrasena: String=""
+    private var email: String=""
+    private var password: String=""
     private var phoneNumber: String=""
     //private var eContacts = mutableListOf<EmergencyContact>()
-    private lateinit var fechaRegistro: Date
+    private lateinit var dateRegister: Date
 
-
-
+    constructor()
 
     constructor(id: Int, name:String, fLastName: String
                 , correo: String, contrasena: String
@@ -21,10 +20,10 @@ class User {
         this.id=id
         this.name=name
         this.fLastName=fLastName
-        this.correo=correo
-        this.contrasena=contrasena
+        this.email=correo
+        this.password=contrasena
         this.phoneNumber=phoneNumber
-        this.fechaRegistro=fechaRegistro
+        this.dateRegister=fechaRegistro
     }
 
     var Id: Int
@@ -40,18 +39,18 @@ class User {
         set(value) {this.fLastName=value}
 
     var Correo: String
-        get() = this.correo
-        set(value) {this.correo=value}
+        get() = this.email
+        set(value) {this.email=value}
 
     var Contrasena: String
-        get() = this.contrasena
-        set(value) {this.contrasena=value}
+        get() = this.password
+        set(value) {this.password=value}
 
     var PhoneNumber: String
         get() = this.phoneNumber
         set(value) {this.phoneNumber=value}
 
     var FechaRegistro: Date
-        get() = this.fechaRegistro
-        set(value) {this.fechaRegistro=value}
+        get() = this.dateRegister
+        set(value) {this.dateRegister=value}
 }
