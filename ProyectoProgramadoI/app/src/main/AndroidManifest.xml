@@ -12,7 +12,35 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProyectoProgramadoI">
         <activity
+<<<<<<< Updated upstream
             android:name=".MainActivity"
+=======
+            android:name=".ChangePasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RecoveryLinkActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ConfigurationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EmergencyContactActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AlertHistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AlertActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SignUpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+>>>>>>> Stashed changes
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -10,4 +10,51 @@
     <string name="ErrorMsgGetC">Error when getting the contacts</string>
     <string name="ErrorMsgAddA">Error when adding the alert</string>
     <string name="ErrorMsgGetA">Error when getting the alerts</string>
+<<<<<<< Updated upstream
+=======
+    <string name="WelcomeTittle">¡Welcome to SOS Puntarenas!</string>
+    <string name="btnForgotPassword">Forgot password?</string>
+    <string name="txtViewSignUp">Don´t have an account?</string>
+    <string name="btnSignUp">Sign Up</string>
+    <string name="LoginTittle">Sign In</string>
+    <string name="SignUpTittle">Sign Up</string>
+    <string name="txtViewWelcome">Welcome, user!</string>
+    <string name="btnSosAlert">Send alert</string>
+    <string name="txtViewClickOnE">Click only in case of emergency</string>
+    <string name="txtViewEmergencyC">Emergency Contacts</string>
+    <string name="txtViewAlertHistory">Alert history</string>
+    <string name="txtViewHome">Home</string>
+    <string name="txtViewSettings">Settings</string>
+    <string name="txtViewSendingMsgTo">Sending SOS to:</string>
+    <string name="txtViewCurrentLocation">Current location:</string>
+    <string name="txtViewCustomMsg">Custom message (optional):</string>
+    <string name="txtViewMsg">Message:</string>
+    <string name="txtViewLocation">SOS location:</string>
+    <string name="btnCancel">Cancel</string>
+    <string name="btnSendNow">Send now</string>
+    <string name="btnRemoveContact">Remove</string>
+    <string name="btnEditContact">Edit</string>
+    <string name="btnAddContact">Add a new contact</string>
+    <string name="txtViewTermsConditions">Terms and conditions</string>
+    <string name="txtChangePass">Change password</string>
+    <string name="txtViewAbout">About</string>
+    <string name="btnSignOut">Sign Out</string>
+    <string name="txtViewChangeNumber">Change phone number</string>
+    <string name="txtRecoveryMsg">We will send you a recovery link to your registered email</string>
+    <string name="btnGetRecoveryLink">Get link recovery</string>
+    <string name="btnChangePass">Change password</string>
+    <string name="MsgPasswordUpdated">Password updated</string>
+    <string name="MsgUserNotFound">User with ID not found</string>
+    <string name="btnLogin">Log in</string>
+    <string name="MsgUserDuplicated">Username already exists</string>
+    <string name="ErrorMsgGetByUser">Username not found</string>
+    <string name="MsgDifferentPass">Passwords are different</string>
+    <string name="MsgSaveSuccess">User added successfully</string>
+    <string name="MsgMissingData">Theres thing to fill yet</string>
+    <string name="MsgWrongPass">Wrong password</string>
+    <string name="btnSaveContact">Save</string>
+    <string name="MsgDuplicatedContact">Contact already exists</string>
+    <string name="MsgDuplicatedNumberC">The phone number already exists</string>
+    <string name="MsgDeleteSuccess">Deleted successfully</string>
+>>>>>>> Stashed changes
 </resources>

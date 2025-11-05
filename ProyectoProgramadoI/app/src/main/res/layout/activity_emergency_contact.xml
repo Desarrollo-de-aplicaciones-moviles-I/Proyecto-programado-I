@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EmergencyContactActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="-92dp"
+        tools:layout_editor_absoluteY="364dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="88dp">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:background="#DFDFDC"
+                android:src="@mipmap/soslogo_foreground"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- CONTACTO 1 -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clContact1"
+                android:layout_width="350dp"
+                android:layout_height="119dp">
+
+                <EditText
+                    android:id="@+id/editTxtNameC1"
+                    android:layout_width="169dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="16dp"
+                    android:drawableLeft="@drawable/user_svgrepo_com"
+                    android:drawablePadding="8dp"
+                    android:drawableTint="#5D5A5A"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Name"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toStartOf="@+id/editTxtPhoneC1"
+                    app:layout_constraintHorizontal_bias="0.32"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/editTxtPhoneC1"
+                    android:layout_width="118dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:drawableLeft="@drawable/phone_svgrepo_com"
+                    android:drawablePadding="8dp"
+                    android:drawableTint="#5D5A5A"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Phone"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/btnEditContact1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/edit_svgrepo_com"
+                    android:drawablePadding="8dp"
+                    android:drawableTint="#5D5A5A"
+                    android:text="@string/btnEditContact"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/btnSaveContact1"
+                    app:layout_constraintHorizontal_bias="0.242"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/editTxtNameC1"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/btnSaveContact1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="32dp"
+                    android:drawableLeft="@drawable/save_svgrepo_com"
+                    android:drawablePadding="8dp"
+                    android:drawableTint="#5D5A5A"
+                    android:text="@string/btnSaveContact"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/btnDeleteContact1"
+                    app:layout_constraintTop_toBottomOf="@+id/editTxtPhoneC1"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/btnDeleteContact1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:drawableLeft="@drawable/delete_1487_svgrepo_com"
+                    android:drawablePadding="8dp"
+                    android:drawableTint="#5D5A5A"
+                    android:text="@string/btnRemoveContact"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/editTxtPhoneC1"
+                    app:layout_constraintVertical_bias="0.0" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="62dp"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/btnAddContact1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:rotation="180"
+                    android:src="@android:drawable/ic_menu_add"
+                    app:fabCustomSize="30dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+        <!-- CONTACTO 2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clContact2"
+                android:layout_width="350dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/btnDeleteContact2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="16dp"
+                    android:drawableLeft="@drawable/delete_1487_svgrepo_com"
+                    android:drawablePadding="8dp"
+                    android:drawableTint="#5D5A5A"
+                    android:text="@string/btnRemoveContact"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/editTxtPhoneC2"
+                    app:layout_constraintVertical_bias="0.054" />
+
+                <EditText
+                    android:id="@+id/editTxtNameC2"
+                    android:layout_width="169dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="16dp"
+                    android:drawableLeft="@drawable/user_svgrepo_com"
+                    android:drawablePadding="8dp"
+                    android:drawableTint="#5D5A5A"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Name"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toStartOf="@+id/editTxtPhoneC2"
+                    app:layout_constraintHorizontal_bias="0.32"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/editTxtPhoneC2"
+                    android:layout_width="118dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:drawableLeft="@drawable/phone_svgrepo_com"
+                    android:drawablePadding="8dp"
+                    android:drawableTint="#5D5A5A"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Phone"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/btnEditContact2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:drawableLeft="@drawable/edit_svgrepo_com"
+                    android:drawablePadding="8dp"
+                    android:drawableTint="#5D5A5A"
+                    android:text="@string/btnEditContact"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/btnSaveContact2"
+                    app:layout_constraintHorizontal_bias="0.131"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/editTxtNameC2"
+                    app:layout_constraintVertical_bias="0.289" />
+
+                <TextView
+                    android:id="@+id/btnSaveContact2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:drawableLeft="@drawable/save_svgrepo_com"
+                    android:drawablePadding="8dp"
+                    android:drawableTint="#5D5A5A"
+                    android:text="@string/btnSaveContact"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/editTxtNameC2"
+                    app:layout_constraintVertical_bias="0.054"
+                    tools:layout_editor_absoluteX="134dp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="62dp"
+                android:layout_height="134dp">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/btnAddContact2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:rotation="180"
+                    android:src="@android:drawable/ic_menu_add"
+                    app:fabCustomSize="30dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+        <!-- CONTACTO 3 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="97dp"
+            android:orientation="horizontal">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clContact3"
+                android:layout_width="350dp"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/editTxtNameC3"
+                    android:layout_width="169dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="16dp"
+                    android:drawableLeft="@drawable/user_svgrepo_com"
+                    android:drawablePadding="8dp"
+                    android:drawableTint="#5D5A5A"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Name"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toStartOf="@+id/editTxtPhoneC3"
+                    app:layout_constraintHorizontal_bias="0.32"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/editTxtPhoneC3"
+                    android:layout_width="118dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:drawableLeft="@drawable/phone_svgrepo_com"
+                    android:drawablePadding="8dp"
+                    android:drawableTint="#5D5A5A"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Phone"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/btnEditContact3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/edit_svgrepo_com"
+                    android:drawablePadding="8dp"
+                    android:drawableTint="#5D5A5A"
+                    android:text="@string/btnEditContact"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/btnSaveContact3"
+                    app:layout_constraintHorizontal_bias="0.34"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/editTxtNameC3"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <TextView
+                    android:id="@+id/btnSaveContact3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="32dp"
+                    android:drawableLeft="@drawable/save_svgrepo_com"
+                    android:drawablePadding="8dp"
+                    android:drawableTint="#5D5A5A"
+                    android:text="@string/btnSaveContact"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/btnDeleteContact3"
+                    app:layout_constraintTop_toBottomOf="@+id/editTxtPhoneC3"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <TextView
+                    android:id="@+id/btnDeleteContact3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:drawableLeft="@drawable/delete_1487_svgrepo_com"
+                    android:drawablePadding="8dp"
+                    android:drawableTint="#5D5A5A"
+                    android:text="@string/btnRemoveContact"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/editTxtPhoneC3"
+                    app:layout_constraintVertical_bias="0.938" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="62dp"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/btnAddContact3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:rotation="180"
+                    android:src="@android:drawable/ic_menu_add"
+                    app:fabCustomSize="30dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="210dp"
+            android:background="#673AB7"
+            android:backgroundTint="#673AB7">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="106dp"
+                android:layout_height="81dp"
+                android:layout_marginStart="76dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.517">
+
+                <ImageButton
+                    android:id="@+id/imageButton2"
+                    android:layout_width="62dp"
+                    android:layout_height="60dp"
+                    android:backgroundTint="#673AB7"
+                    android:src="@drawable/home_1_svgrepo_com"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/txtViewHome"
+                    android:textColor="#FFFFFF"
+                    android:textSize="17dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="137dp"
+                android:layout_height="85dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.309"
+                app:layout_constraintStart_toEndOf="@+id/constraintLayout"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.52">
+
+                <ImageButton
+                    android:id="@+id/btnSettings"
+                    android:layout_width="60dp"
+                    android:layout_height="57dp"
+                    android:backgroundTint="#673AB7"
+                    android:src="@drawable/settings_svgrepo_com"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.506"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/txtViewSettings"
+                    android:textColor="#FFFFFF"
+                    android:textSize="17dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.551"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btnSettings"
+                    app:layout_constraintVertical_bias="0.0" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

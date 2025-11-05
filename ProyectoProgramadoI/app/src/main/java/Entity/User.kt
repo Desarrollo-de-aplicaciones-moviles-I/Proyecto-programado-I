@@ -1,8 +1,7 @@
 package Entity
 
-import java.util.Date
-
 class User {
+<<<<<<< Updated upstream
     private var id: Int=0
     private var name: String=""
     private var fLastName: String=""
@@ -13,8 +12,16 @@ class User {
     private lateinit var fechaRegistro: Date
 
 
+=======
+    private var username: String=""
+    private var email: String=""
+    private var password: String=""
+    private var phoneNumber: String=""
+    //private var eContacts = mutableListOf<EmergencyContact>()
+>>>>>>> Stashed changes
 
 
+<<<<<<< Updated upstream
     constructor(id: Int, name:String, fLastName: String
                 , correo: String, contrasena: String
                 , phoneNumber: String, fechaRegistro: Date){
@@ -25,12 +32,21 @@ class User {
         this.contrasena=contrasena
         this.phoneNumber=phoneNumber
         this.fechaRegistro=fechaRegistro
+=======
+    constructor(username:String, correo: String
+                , contrasena: String, phoneNumber: String){
+        this.username=username
+        this.email=correo
+        this.password=contrasena
+        this.phoneNumber=phoneNumber
+>>>>>>> Stashed changes
     }
 
-    var Id: Int
-        get() = this.id
-        set(value) {this.id=value}
+    var Username: String
+        get() = this.username
+        set(value) {this.username=value}
 
+<<<<<<< Updated upstream
     var Name: String
         get() = this.name
         set(value) {this.name=value}
@@ -46,12 +62,24 @@ class User {
     var Contrasena: String
         get() = this.contrasena
         set(value) {this.contrasena=value}
+=======
+    var Email: String
+        get() = this.email
+        set(value) {this.email=value}
+
+    var Password: String
+        get() = this.password
+        set(value) {this.password=value}
+>>>>>>> Stashed changes
 
     var PhoneNumber: String
         get() = this.phoneNumber
         set(value) {this.phoneNumber=value}
+<<<<<<< Updated upstream
 
     var FechaRegistro: Date
         get() = this.fechaRegistro
         set(value) {this.fechaRegistro=value}
+=======
+>>>>>>> Stashed changes
 }

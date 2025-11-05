@@ -30,22 +30,37 @@ class ContactController {
         }
     }
 
-    fun removeC(id: Int){
+    fun removeC(name: String){
         try {
-            dataManager.removeContact(id)
+            dataManager.removeContact(name)
         }catch (e: Exception){
             throw Exception(context.getString(R.string.ErrorMsgRemoveC))
         }
     }
 
-    fun getEContactsByU(id: Int){
+    fun getEContactsByU(nameUser: String){
         try {
-            dataManager.getEContactsByUser(id)
+            dataManager.getEContactsByUser(nameUser)
         }catch (e: Exception){
             throw Exception(context.getString(R.string.ErrorMsgGetC))
         }
     }
 
+    fun getEContactsByN(nameContact: String): EmergencyContact?{
+        try {
+            return dataManager.getEContactsByName(nameContact)
+        }catch (e: Exception){
+            throw Exception(context.getString(R.string.ErrorMsgGetC))
+        }
+    }
+
+    fun getEContactsByP(phoneContact: String): EmergencyContact?{
+        try {
+            return dataManager.getEContactsByPhone(phoneContact)
+        }catch (e: Exception){
+            throw Exception(context.getString(R.string.MsgDuplicatedNumberC))
+        }
+    }
 
 
 }
