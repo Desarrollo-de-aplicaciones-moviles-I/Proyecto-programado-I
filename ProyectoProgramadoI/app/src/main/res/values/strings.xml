@@ -9,8 +9,6 @@
     <string name="ErrorMsgGetC">Error al obtener contactos</string>
     <string name="ErrorMsgAddA">Error al añadir la alerta</string>
     <string name="ErrorMsgGetA">Error al obtener las alertas</string>
-<<<<<<< Updated upstream
-=======
     <string name="WelcomeTittle">¡Bienvenido a SOS Puntarenas!</string>
     <string name="btnForgotPassword">Olvidaste la contraseña?</string>
     <string name="txtViewSignUp">No tienes una cuenta?</string>
@@ -55,5 +53,4 @@
     <string name="MsgDuplicatedContact">Ya añadiste este contacto</string>
     <string name="MsgDuplicatedNumberC">El número de teléfono ya fue añadido anteriormente</string>
     <string name="MsgDeleteSuccess">Contacto borrado satisfactoriamente</string>
->>>>>>> Stashed changes
 </resources>

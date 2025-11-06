@@ -14,41 +14,27 @@ class UserController {
         this.context=context
     }
 
-    fun addU(usuario: User){
+    fun addU(user: User){
         try {
-            dataManager.addUser(usuario)
+            dataManager.addUser(user)
         }catch (e: Exception){
             throw Exception(context.getString(R.string.ErrorMsgAddU))
         }
     }
 
-<<<<<<< Updated upstream
-    fun updatePass(userId: Int, newPassword: String){
-        try {
-            dataManager.updatePassword(userId, newPassword)
-=======
     fun updatePass(context: Context, username: String, newPassword: String){
         try {
             dataManager.updatePassword(context, username, newPassword)
->>>>>>> Stashed changes
         }catch (e: Exception){
             throw Exception(context.getString(R.string.ErrorMsgUpdPass))
         }
     }
 
-<<<<<<< Updated upstream
-    fun updateEmai(userId: Int, newEmail: String){
-        try {
-            dataManager.updateEmail(userId, newEmail)
-        }catch (e: Exception){
-            throw Exception(context.getString(R.string.ErrorMsgUpdEmai))
-=======
     fun getByUsername(username:String): User?{
         try {
             return dataManager.getByUsername(username)
         }catch (e: Exception){
             throw Exception(context.getString(R.string.ErrorMsgGetByUser))
->>>>>>> Stashed changes
         }
     }
 

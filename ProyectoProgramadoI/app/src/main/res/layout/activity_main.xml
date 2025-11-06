@@ -5,18 +5,12 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#E0E0DD"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-<<<<<<< Updated upstream
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-=======
         android:background="#F9F9F9"
         android:elevation="8dp"
         android:orientation="vertical"
@@ -202,7 +196,7 @@
                 app:layout_constraintVertical_bias="0.517">
 
                 <ImageButton
-                    android:id="@+id/imageButton2"
+                    android:id="@+id/btnHomeEC"
                     android:layout_width="62dp"
                     android:layout_height="60dp"
                     android:backgroundTint="#673AB7"
@@ -223,7 +217,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
+                    app:layout_constraintTop_toBottomOf="@+id/btnHomeEC" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -238,7 +232,7 @@
                 app:layout_constraintVertical_bias="0.52">
 
                 <ImageButton
-                    android:id="@+id/btnSettings"
+                    android:id="@+id/btnSettingsEC"
                     android:layout_width="60dp"
                     android:layout_height="57dp"
                     android:backgroundTint="#673AB7"
@@ -261,13 +255,12 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.551"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/btnSettings"
+                    app:layout_constraintTop_toBottomOf="@+id/btnSettingsEC"
                     app:layout_constraintVertical_bias="0.0" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
->>>>>>> Stashed changes
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,9 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProyectoProgramadoI">
         <activity
-<<<<<<< Updated upstream
-            android:name=".MainActivity"
-=======
             android:name=".ChangePasswordActivity"
             android:exported="false" />
         <activity
@@ -40,7 +37,6 @@
             android:exported="false" />
         <activity
             android:name=".LoginActivity"
->>>>>>> Stashed changes
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

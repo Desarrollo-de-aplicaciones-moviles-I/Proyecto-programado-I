@@ -1,7 +1,6 @@
 package com.example.proyectoprogramadoi
 
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
 import android.widget.ImageButton
 import androidx.activity.enableEdgeToEdge
@@ -36,7 +35,7 @@ class MainActivity : AppCompatActivity() {
             Util.Util.openActivity(this, AlertHistoryActivity::class.java)
         }
 
-        val btnSettings: ImageButton = findViewById<ImageButton>(R.id.btnSettings)
+        val btnSettings: ImageButton = findViewById<ImageButton>(R.id.btnSettingsEC)
         btnSettings.setOnClickListener {
             Util.Util.openActivity(this, ConfigurationActivity::class.java)
         }

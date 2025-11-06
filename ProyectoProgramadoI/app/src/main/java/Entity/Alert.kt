@@ -1,23 +1,22 @@
 package Entity
 
 import java.util.Date
-import kotlin.collections.mutableListOf
 
 class Alert {
     private var idAlert: Int=0
-    private lateinit var fechaAlerta: Date
-    private var mensaje: String=""
-    private var latitud: Int=0
-    private var longitud: Int=0
+    private lateinit var dateAlert: Date
+    private var message: String=""
+    private var latitude: Int=0
+    private var longitude: Int=0
     private var idUser: Int=0
 
     constructor(idAlert: Int, fechaAlerta: Date, mensaje:String
                 , latitud: Int, longitud: Int,  idUser: Int){
         this.idAlert=idAlert
-        this.fechaAlerta=fechaAlerta
-        this.mensaje=mensaje
-        this.latitud=latitud
-        this.longitud=longitud
+        this.dateAlert=fechaAlerta
+        this.message=mensaje
+        this.latitude=latitud
+        this.longitude=longitud
         this.idUser=idUser
     }
 
@@ -26,20 +25,20 @@ class Alert {
         set(value) {this.idAlert=value}
 
     var FechaAlerta: Date
-        get() = this.fechaAlerta
-        set(value) {this.fechaAlerta=value}
+        get() = this.dateAlert
+        set(value) {this.dateAlert=value}
 
     var Mensaje: String
-        get() = this.mensaje
-        set(value) {this.mensaje=value}
+        get() = this.message
+        set(value) {this.message=value}
 
     var Latitud: Int
-        get() = this.latitud
-        set(value) {this.latitud=value}
+        get() = this.latitude
+        set(value) {this.latitude=value}
 
     var Longitud: Int
-        get() = this.longitud
-        set(value) {this.longitud=value}
+        get() = this.longitude
+        set(value) {this.longitude=value}
 
     var IdUser: Int
         get() = this.idUser

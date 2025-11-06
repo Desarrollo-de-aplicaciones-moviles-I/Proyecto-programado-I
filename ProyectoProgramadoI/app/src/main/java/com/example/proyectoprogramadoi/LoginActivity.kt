@@ -16,6 +16,9 @@ import androidx.core.view.WindowInsetsCompat
 
 
 class LoginActivity : AppCompatActivity() {
+    companion object {
+        lateinit var currentUserName: String
+    }
     private lateinit var txtUsername: EditText
     private lateinit var txtPassword: EditText
     private lateinit var userController: UserController
@@ -38,11 +41,13 @@ class LoginActivity : AppCompatActivity() {
         btnLogin.setOnClickListener(View.OnClickListener { view ->
             val username = txtUsername.text.toString().trim()
             val password = txtPassword.text.toString().trim()
-            /*
             if (username.isNotBlank() && password.isNotBlank()) {
                 val usuario = userController.getByUsername(username)
                 if (usuario != null) {
                     if (username == usuario.Username && password == usuario.Password) {
+                        currentUserName = username
+                        txtUsername.setText("")
+                        txtPassword.setText("")
                         Util.Util.openActivity(this, MainActivity::class.java)
                     } else {
                         Toast.makeText(this, getString(R.string.MsgWrongPass), Toast.LENGTH_SHORT).show()
@@ -53,8 +58,7 @@ class LoginActivity : AppCompatActivity() {
             } else {
                 Toast.makeText(this,getString(R.string.MsgMissingData), Toast.LENGTH_SHORT).show()
             }
-            */
-            Util.Util.openActivity(this, MainActivity::class.java)
+            //Util.Util.openActivity(this, MainActivity::class.java)
         })
 
         val btnSignUp: TextView = findViewById<TextView>(R.id.btnSignUp)

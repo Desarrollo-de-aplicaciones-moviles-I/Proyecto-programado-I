@@ -8,10 +8,10 @@ class EmergencyContact {
     constructor()
 
     constructor(name: String, phoneNumber: String
-                ,  idUser: String){
+                , nameUser: String){
         this.name=name
         this.phoneNumber=phoneNumber
-        this.nameUser=idUser
+        this.nameUser=nameUser
     }
 
     var Name: String

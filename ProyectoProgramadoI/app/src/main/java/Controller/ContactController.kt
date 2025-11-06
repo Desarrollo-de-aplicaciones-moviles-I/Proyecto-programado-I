@@ -14,17 +14,17 @@ class ContactController {
         this.context=context
     }
 
-    fun addC(contacto: EmergencyContact){
+    fun addC(contact: EmergencyContact){
         try {
-            dataManager.addContact(contacto)
+            dataManager.addContact(contact)
         }catch (e: Exception){
             throw Exception(context.getString(R.string.ErrorMsgAddC))
         }
     }
 
-    fun updateC(contacto: EmergencyContact){
+    fun updateC(contact: EmergencyContact){
         try {
-            dataManager.updateContact(contacto)
+            dataManager.updateContact(contact)
         }catch (e: Exception){
             throw Exception(context.getString(R.string.ErrorMsgUpdC))
         }
@@ -38,10 +38,10 @@ class ContactController {
         }
     }
 
-    fun getEContactsByU(nameUser: String){
+    fun getEContactsByU(nameUser: String): List<EmergencyContact> {
         try {
-            dataManager.getEContactsByUser(nameUser)
-        }catch (e: Exception){
+            return dataManager.getEContactsByUser(nameUser)
+        } catch (e: Exception) {
             throw Exception(context.getString(R.string.ErrorMsgGetC))
         }
     }
