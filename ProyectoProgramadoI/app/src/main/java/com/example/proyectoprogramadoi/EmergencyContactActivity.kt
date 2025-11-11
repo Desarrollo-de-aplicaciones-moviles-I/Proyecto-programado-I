@@ -1,5 +1,6 @@
 package com.example.proyectoprogramadoi
 
+
 import Controller.ContactController
 import Entity.EmergencyContact
 import Entity.User
@@ -259,3 +260,4 @@ class EmergencyContactActivity : AppCompatActivity() {
     }
 
 }
+

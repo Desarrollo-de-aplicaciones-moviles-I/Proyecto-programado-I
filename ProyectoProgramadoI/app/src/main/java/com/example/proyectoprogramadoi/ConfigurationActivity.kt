@@ -23,5 +23,6 @@ class ConfigurationActivity : AppCompatActivity() {
         btnLogOutS.setOnClickListener(View.OnClickListener{ view ->
             Util.Util.openActivity(this, LoginActivity::class.java)
         })
+
     }
 }

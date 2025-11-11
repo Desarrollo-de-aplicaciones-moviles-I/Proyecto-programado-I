@@ -1,5 +1,6 @@
 package com.example.proyectoprogramadoi
 
+
 import Controller.UserController
 import Entity.User
 import android.os.Bundle
@@ -12,7 +13,6 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-
 
 
 class LoginActivity : AppCompatActivity() {

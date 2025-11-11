@@ -115,6 +115,7 @@
                 app:layout_constraintStart_toEndOf="@id/txtViewQuestion" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+
     </androidx.cardview.widget.CardView>
 
     <TextView
@@ -132,3 +133,4 @@
         android:gravity="center" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+

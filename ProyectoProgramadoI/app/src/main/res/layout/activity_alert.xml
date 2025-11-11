@@ -23,6 +23,7 @@
                 android:layout_height="75dp"
                 android:background="#DFDFDC"
                 android:src="@mipmap/soslogo_foreground"
+
                 app:layout_constraintStart_toStartOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -50,6 +50,7 @@ object MemoryDataManager: IDataManagerAlert, IDataManagerContact, IDataManagerUs
     override fun getEContactsByPhone(phoneContact: String): EmergencyContact? {
         val result = eContactList.filter { it.PhoneNumber.trim() == phoneContact.trim() }
         return if(result.any()) result[0] else null
+
     }
 
     //--------------------------------------------------
@@ -66,7 +67,6 @@ object MemoryDataManager: IDataManagerAlert, IDataManagerContact, IDataManagerUs
         } else {
             println(context.getString(R.string.MsgUserNotFound))
         }
-    }
 
     override fun getByUsername(username: String): User?{
         val result = userList.filter { it.Username.trim() == username.trim() }
