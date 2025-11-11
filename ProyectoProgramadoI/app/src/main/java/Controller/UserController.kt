@@ -14,27 +14,19 @@ class UserController {
         this.context=context
     }
 
-    fun addU(usuario: User){
+    fun addU(user: User){
         try {
-            dataManager.addUser(usuario)
+            dataManager.addUser(user)
         }catch (e: Exception){
             throw Exception(context.getString(R.string.ErrorMsgAddU))
         }
     }
 
-    fun updatePass(userId: Int, newPassword: String){
+    fun updatePass(context: Context, userId: Int, newPassword: String){
         try {
-            dataManager.updatePassword(userId, newPassword)
+            dataManager.updatePassword(context, userId, newPassword)
         }catch (e: Exception){
             throw Exception(context.getString(R.string.ErrorMsgUpdPass))
-        }
-    }
-
-    fun updateEmai(userId: Int, newEmail: String){
-        try {
-            dataManager.updateEmail(userId, newEmail)
-        }catch (e: Exception){
-            throw Exception(context.getString(R.string.ErrorMsgUpdEmai))
         }
     }
 

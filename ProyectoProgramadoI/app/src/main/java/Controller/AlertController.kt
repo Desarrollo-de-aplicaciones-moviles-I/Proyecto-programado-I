@@ -14,17 +14,17 @@ class AlertController {
         this.context=context
     }
 
-    fun addA(alerta: Alert){
+    fun addA(alert: Alert){
         try {
-            dataManager.addAlert(alerta)
+            dataManager.addAlert(alert)
         }catch (e: Exception){
             throw Exception(context.getString(R.string.ErrorMsgAddA))
         }
     }
 
-    fun getAlertByU(idUsuario: Int){
+    fun getAlertByU(idUser: Int){
         try {
-            dataManager.getAlertByUser(idUsuario)
+            dataManager.getAlertByUser(idUser)
         }catch (e: Exception){
             throw Exception(context.getString(R.string.ErrorMsgGetA))
         }
