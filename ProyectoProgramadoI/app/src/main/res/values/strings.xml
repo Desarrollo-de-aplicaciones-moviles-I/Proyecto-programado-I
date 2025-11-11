@@ -9,6 +9,7 @@
     <string name="ErrorMsgGetC">Error al obtener contactos</string>
     <string name="ErrorMsgAddA">Error al añadir la alerta</string>
     <string name="ErrorMsgGetA">Error al obtener las alertas</string>
+    <string name="ErrorMsgGetByEmail">Correo no encontrado</string>
     <string name="WelcomeTittle">¡Bienvenido a SOS Puntarenas!</string>
     <string name="btnForgotPassword">Olvidaste la contraseña?</string>
     <string name="txtViewSignUp">No tienes una cuenta?</string>
@@ -34,7 +35,7 @@
     <string name="btnAddContact">Añadir nuevo contacto</string>
     <string name="txtViewTermsConditions">Términos y condiciones</string>
     <string name="txtChangePass">Cambiar contraseña</string>
-    <string name="txtViewAbout">Acerca de</string>
+    <string name="txtViewAbout">Acerca de nosotros</string>
     <string name="btnSignOut">Cerrar sesión</string>
     <string name="txtViewChangeNumber">"Cambiar número "</string>
     <string name="txtRecoveryMsg">Te enviaremos un enlace de recuperación a tu correo registrado</string>
@@ -53,4 +54,37 @@
     <string name="MsgDuplicatedContact">Ya añadiste este contacto</string>
     <string name="MsgDuplicatedNumberC">El número de teléfono ya fue añadido anteriormente</string>
     <string name="MsgDeleteSuccess">Contacto borrado satisfactoriamente</string>
+    <string name="MsgLinkSent">El correo de recuperación fue enviado</string>
+    <string name="txtViewAboutUsDesc">
+        SOS Puntarenas es una aplicación web móvil creada para fortalecer la seguridad y el bienestar de las personas en nuestra región. Nuestro objetivo es ofrecer una herramienta confiable que permita reaccionar ante una emergencia con rapidez y eficacia.\n\n
+        Con solo un toque, los usuarios pueden enviar una alerta de emergencia junto con su ubicación en tiempo real a sus contactos de confianza, garantizando que la ayuda llegue justo cuando más se necesita.\n\n
+        La plataforma está diseñada para ser intuitiva, accesible y ágil, facilitando su uso en cualquier momento y lugar. Además, permite registrar contactos de emergencia, consultar el historial de alertas enviadas y administrar la cuenta de manera sencilla.\n\n
+        En SOS Puntarenas, creemos que la tecnología puede salvar vidas cuando se pone al servicio de la comunidad. Por eso, trabajamos para brindar a cada usuario seguridad, confianza y tranquilidad, siempre al alcance de su mano.
+    </string>
+    <string name="txtViewTermsConditionsDesc">
+        Última actualización: 11/10/2025\n\n
+        Bienvenido(a) a SOS Puntarenas, una aplicación web móvil creada para mejorar la seguridad de las personas en la región. Al usar esta plataforma, aceptas los siguientes términos:\n\n
+        1. Uso del servicio\n\n
+        SOS Puntarenas permite enviar alertas de emergencia con ubicación en tiempo real a contactos de confianza.\n
+        La aplicación no reemplaza a los servicios oficiales de emergencia. Su función es complementaria y depende del correcto funcionamiento del dispositivo y la conexión a internet.\n\n
+        2. Registro y responsabilidad del usuario\n\n
+        Para usar la app, debes crear una cuenta con información real y mantenerla actualizada.\n
+        Eres responsable de proteger tus credenciales y de no usar la aplicación para enviar alertas falsas o con fines indebidos.\n\n
+        3. Privacidad y datos\n\n
+        Recolectamos datos personales (como nombre, correo y ubicación) solo para brindar el servicio.\n
+        No compartimos tu información con terceros sin tu consentimiento. Puedes solicitar la eliminación de tu cuenta y datos cuando lo desees.\n\n
+        4. Limitación de responsabilidad\n\n
+        SOS Puntarenas no se hace responsable por fallas técnicas, errores en la red o cualquier daño derivado del uso del servicio.\n
+        El usuario acepta que el uso de la aplicación es bajo su propia responsabilidad.\n\n
+        5. Propiedad y modificaciones\n\n
+        El nombre, logotipo y diseño de SOS Puntarenas pertenecen a sus creadores.\n
+        Podemos actualizar estos términos en cualquier momento; el uso continuo de la app implica la aceptación de las modificaciones.\n\n
+        6. Contacto\n\n
+        Para consultas o soporte, escríbenos a:\n
+        lamonteroca@est.utn.ac.cr
+    </string>
+    <string name="MsgPhoneUpdated">Teléfono actulizado con éxito</string>
+    <string name="txtViewCurrentPhone">Teléfono actual:</string>
+    <string name="btnChangePhone">Cambiar teléfono</string>
+
 </resources>

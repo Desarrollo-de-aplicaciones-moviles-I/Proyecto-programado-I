@@ -15,6 +15,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 
+
 class LoginActivity : AppCompatActivity() {
     companion object {
         lateinit var currentUserName: String
@@ -37,6 +38,13 @@ class LoginActivity : AppCompatActivity() {
         txtPassword = findViewById<EditText>(R.id.editTxtPasswordSI)
         userController = UserController(this)
 
+
+        val btnForgotPassword: TextView = findViewById<TextView>(R.id.btnForgotPassword)
+        btnForgotPassword.setOnClickListener(View.OnClickListener { view ->
+            Util.Util.openActivity(this, RecoveryLinkActivity::class.java)
+        })
+
+
         val btnLogin: Button = findViewById<Button>(R.id.btnLogin)
         btnLogin.setOnClickListener(View.OnClickListener { view ->
             val username = txtUsername.text.toString().trim()
@@ -58,7 +66,6 @@ class LoginActivity : AppCompatActivity() {
             } else {
                 Toast.makeText(this,getString(R.string.MsgMissingData), Toast.LENGTH_SHORT).show()
             }
-            //Util.Util.openActivity(this, MainActivity::class.java)
         })
 
         val btnSignUp: TextView = findViewById<TextView>(R.id.btnSignUp)

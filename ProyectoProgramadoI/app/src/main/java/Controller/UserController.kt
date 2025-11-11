@@ -38,5 +38,28 @@ class UserController {
         }
     }
 
+    fun getByEmail(email: String): User?{
+        try {
+            return dataManager.getByEmail(email)
+        }catch (e: Exception){
+            throw Exception(context.getString(R.string.ErrorMsgGetByEmail))
+        }
+    }
+
+    fun changePassword(user: User, password: String){
+        try {
+            dataManager.changePassword(user, password)
+        }catch (e: Exception){
+            throw Exception("Error ${e}")
+        }
+    }
+
+    fun changePhone(user: User, phone: String){
+        try {
+            dataManager.changePhone(user, phone)
+        }catch (e: Exception){
+            throw Exception("Error ${e}")
+        }
+    }
 
 }

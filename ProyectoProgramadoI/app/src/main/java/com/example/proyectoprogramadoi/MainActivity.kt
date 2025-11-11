@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
             Util.Util.openActivity(this, AlertActivity::class.java)
         }
 
-        val btnEmergencyC: FloatingActionButton = findViewById<FloatingActionButton>(R.id.btnEmergencyC)
+        val btnEmergencyC: FloatingActionButton = findViewById<FloatingActionButton>(R.id.btnEmergencyContactsM)
         btnEmergencyC.setOnClickListener {
             Util.Util.openActivity(this, EmergencyContactActivity::class.java)
         }
