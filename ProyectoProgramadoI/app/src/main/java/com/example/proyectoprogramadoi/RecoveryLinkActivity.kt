@@ -34,7 +34,7 @@ class RecoveryLinkActivity : AppCompatActivity() {
             finish()
         }
 
-        val btnGetRecLink: Button = findViewById<Button>(R.id.btnChangePhoneACP)
+        val btnGetRecLink: Button = findViewById<Button>(R.id.btnChangeEmailRL)
         btnGetRecLink.setOnClickListener(View.OnClickListener { view ->
             val email = editTxtEmail.text.toString().trim()
             if (email.isNotBlank()) {

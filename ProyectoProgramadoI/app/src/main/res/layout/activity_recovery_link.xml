@@ -55,7 +55,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <Button
-                android:id="@+id/btnChangePhoneACP"
+                android:id="@+id/btnChangeEmailRL"
                 android:layout_width="282dp"
                 android:layout_height="66dp"
                 android:text="@string/btnGetRecoveryLink"

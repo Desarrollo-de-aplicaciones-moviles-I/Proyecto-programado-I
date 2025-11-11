@@ -36,8 +36,8 @@ class SignUpActivity : AppCompatActivity() {
         txtUsername = findViewById<EditText>(R.id.editTxtUsernameSU)
         txtEmail = findViewById<EditText>(R.id.editTxtEmailSU)
         txtPhone = findViewById<EditText>(R.id.editTxtPhoneSU)
-        txtPassword = findViewById<EditText>(R.id.editTxtPass)
-        txtCPassword = findViewById<EditText>(R.id.editTxtPhone)
+        txtPassword = findViewById<EditText>(R.id.editTxtPassSU)
+        txtCPassword = findViewById<EditText>(R.id.editTxtCPassSU)
 
         val btnBack: FloatingActionButton = findViewById<FloatingActionButton>(R.id.btnBack)
         btnBack.setOnClickListener {
@@ -49,7 +49,7 @@ class SignUpActivity : AppCompatActivity() {
             cleanScreen()
         }
 
-        val btnSignUpSU: Button = findViewById<Button>(R.id.btnChangePhoneACP)
+        val btnSignUpSU: Button = findViewById<Button>(R.id.btnCreateAccountSU)
         btnSignUpSU.setOnClickListener {
             savePerson()
         }

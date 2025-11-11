@@ -25,12 +25,12 @@ class MainActivity : AppCompatActivity() {
             Util.Util.openActivity(this, AlertActivity::class.java)
         }
 
-        val btnEmergencyC: FloatingActionButton = findViewById<FloatingActionButton>(R.id.btnChangePass)
+        val btnEmergencyC: FloatingActionButton = findViewById<FloatingActionButton>(R.id.btnEmergencyContactsM)
         btnEmergencyC.setOnClickListener {
             Util.Util.openActivity(this, EmergencyContactActivity::class.java)
         }
 
-        val btnAlertHistory: FloatingActionButton = findViewById<FloatingActionButton>(R.id.btnChangePhone)
+        val btnAlertHistory: FloatingActionButton = findViewById<FloatingActionButton>(R.id.btnAlertHistory)
         btnAlertHistory.setOnClickListener {
             Util.Util.openActivity(this, AlertHistoryActivity::class.java)
         }
