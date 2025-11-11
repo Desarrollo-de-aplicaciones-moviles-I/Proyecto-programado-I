@@ -22,7 +22,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="75dp"
                 android:background="#DFDFDC"
-                android:src="@drawable/logo"
+                android:src="@mipmap/soslogo_foreground"
                 app:layout_constraintStart_toStartOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -45,9 +45,10 @@
                 android:background="#FDF9FC">
 
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
-                    android:id="@+id/floatingActionButton4"
+                    android:id="@+id/btnTermsConditions"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
                     android:clickable="true"
                     android:rotation="180"
                     android:src="?attr/homeAsUpIndicator"
@@ -55,10 +56,10 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.604"
                     app:layout_constraintStart_toEndOf="@+id/textView17"
-                    tools:layout_editor_absoluteY="5dp" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
-                    android:id="@+id/floatingActionButton3"
+                    android:id="@+id/btnAboutUs"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:clickable="true"
@@ -68,7 +69,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.706"
                     app:layout_constraintStart_toEndOf="@+id/textView33"
-                    tools:layout_editor_absoluteY="149dp" />
+                    app:layout_constraintTop_toBottomOf="@+id/btnChangePass" />
 
                 <TextView
                     android:id="@+id/textView33"
@@ -105,7 +106,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
-                    android:id="@+id/floatingActionButton2"
+                    android:id="@+id/btnChangePhone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:clickable="true"
@@ -115,10 +116,10 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.709"
                     app:layout_constraintStart_toEndOf="@+id/textView7"
-                    tools:layout_editor_absoluteY="53dp" />
+                    app:layout_constraintTop_toBottomOf="@+id/btnTermsConditions" />
 
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
-                    android:id="@+id/floatingActionButton"
+                    android:id="@+id/btnChangePass"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:clickable="true"
@@ -128,7 +129,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.706"
                     app:layout_constraintStart_toEndOf="@+id/textView9"
-                    tools:layout_editor_absoluteY="101dp" />
+                    app:layout_constraintTop_toBottomOf="@+id/btnChangePhone" />
 
                 <TextView
                     android:id="@+id/textView17"
@@ -179,7 +180,7 @@
             android:layout_height="72dp">
 
             <TextView
-                android:id="@+id/textView34"
+                android:id="@+id/btnLogOutS"
                 android:layout_width="138dp"
                 android:layout_height="27dp"
                 android:layout_marginTop="20dp"
@@ -209,58 +210,83 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="160dp"
+            android:layout_marginTop="140dp"
             android:background="#673AB7"
             android:backgroundTint="#673AB7">
 
-            <ImageButton
-                android:id="@+id/imageButton2"
-                android:layout_width="62dp"
-                android:layout_height="60dp"
-                android:backgroundTint="#673AB7"
-                android:src="@drawable/home_1_svgrepo_com"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="106dp"
+                android:layout_height="81dp"
+                android:layout_marginStart="76dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageButton5"
-                app:layout_constraintHorizontal_bias="0.357"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.16" />
+                app:layout_constraintVertical_bias="0.517">
 
-            <ImageButton
-                android:id="@+id/imageButton5"
-                android:layout_width="55dp"
-                android:layout_height="59dp"
-                android:layout_marginEnd="88dp"
-                android:backgroundTint="#673AB7"
-                android:src="@drawable/settings_svgrepo_com"
+                <ImageButton
+                    android:id="@+id/btnHomeEC"
+                    android:layout_width="62dp"
+                    android:layout_height="60dp"
+                    android:backgroundTint="#673AB7"
+                    android:src="@drawable/home_1_svgrepo_com"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/txtViewHome"
+                    android:textColor="#FFFFFF"
+                    android:textSize="17dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btnHomeEC" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="137dp"
+                android:layout_height="85dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.309"
+                app:layout_constraintStart_toEndOf="@+id/constraintLayout"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.156" />
+                app:layout_constraintVertical_bias="0.52">
 
-            <TextView
-                android:id="@+id/textView8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-medium"
-                android:text="@string/txtViewHome"
-                android:textColor="#FFFFFF"
-                android:textSize="17dp"
-                android:textStyle="bold"
-                tools:layout_editor_absoluteX="83dp"
-                tools:layout_editor_absoluteY="67dp" />
+                <ImageButton
+                    android:id="@+id/btnSettingsEC"
+                    android:layout_width="60dp"
+                    android:layout_height="57dp"
+                    android:backgroundTint="#673AB7"
+                    android:src="@drawable/settings_svgrepo_com"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.506"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/textView10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-medium"
-                android:text="@string/txtViewSettings"
-                android:textColor="#FFFFFF"
-                android:textSize="17dp"
-                android:textStyle="bold"
-                tools:layout_editor_absoluteX="240dp"
-                tools:layout_editor_absoluteY="67dp" />
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/txtViewSettings"
+                    android:textColor="#FFFFFF"
+                    android:textSize="17dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.551"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btnSettingsEC"
+                    app:layout_constraintVertical_bias="0.0" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

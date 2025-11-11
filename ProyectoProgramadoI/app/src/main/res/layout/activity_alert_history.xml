@@ -21,7 +21,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="75dp"
                 android:background="#DFDFDC"
-                android:src="@drawable/logo"
+                android:src="@mipmap/soslogo_foreground"
                 app:layout_constraintStart_toStartOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -30,67 +30,76 @@
             android:layout_height="277dp">
 
             <TextView
-                android:id="@+id/textView11"
+                android:id="@+id/editTextNameC"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
                 android:drawableLeft="@drawable/date_range_svgrepo_com"
                 android:drawablePadding="8dp"
                 android:drawableTint="#5D5A5A"
                 android:fontFamily="sans-serif-medium"
                 android:text="10/10/2025"
-                app:layout_constraintEnd_toStartOf="@+id/textView12"
-                app:layout_constraintHorizontal_bias="0.098"
+                app:layout_constraintEnd_toStartOf="@+id/editTextPhoneC"
+                app:layout_constraintHorizontal_bias="0.097"
                 app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="24dp" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textView12"
+                android:id="@+id/editTextPhoneC"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="84dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="80dp"
                 android:fontFamily="sans-serif-medium"
                 android:text="20:00"
                 app:layout_constraintEnd_toEndOf="parent"
-                tools:layout_editor_absoluteY="24dp" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textView13"
+                android:id="@+id/btnEditContact3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:text="@string/txtViewMsg"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.05"
                 app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="70dp" />
+                app:layout_constraintTop_toBottomOf="@+id/editTextNameC" />
 
             <TextView
-                android:id="@+id/textView14"
+                android:id="@+id/btnDeleteContact"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
                 android:layout_marginEnd="168dp"
                 android:text="&quot;Mensaje Personalizado&quot;"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toEndOf="@+id/textView13"
-                tools:layout_editor_absoluteY="70dp" />
+                app:layout_constraintStart_toEndOf="@+id/btnEditContact3"
+                app:layout_constraintTop_toBottomOf="@+id/editTextPhoneC" />
 
             <TextView
                 android:id="@+id/textView18"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:text="@string/txtViewLocation"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.065"
                 app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="106dp" />
+                app:layout_constraintTop_toBottomOf="@+id/btnEditContact3" />
 
             <com.google.android.gms.maps.MapView
                 android:id="@+id/mapView2"
                 android:layout_width="290dp"
                 android:layout_height="130dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.495"
                 app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="133dp" />
+                app:layout_constraintTop_toBottomOf="@+id/textView18"
+                app:layout_constraintVertical_bias="0.0" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <View
@@ -107,121 +116,156 @@
                 android:id="@+id/textView19"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
                 android:drawableLeft="@drawable/date_range_svgrepo_com"
                 android:drawablePadding="8dp"
                 android:drawableTint="#5D5A5A"
                 android:fontFamily="sans-serif-medium"
                 android:text="10/10/2025"
                 app:layout_constraintEnd_toStartOf="@+id/textView20"
-                app:layout_constraintHorizontal_bias="0.086"
+                app:layout_constraintHorizontal_bias="0.083"
                 app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="24dp" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/textView20"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
                 android:layout_marginEnd="76dp"
                 android:fontFamily="sans-serif-medium"
                 android:text="20:00"
                 app:layout_constraintEnd_toEndOf="parent"
-                tools:layout_editor_absoluteY="24dp" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/textView21"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:text="@string/txtViewMsg"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.05"
                 app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="70dp" />
+                app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
             <TextView
                 android:id="@+id/textView22"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
                 android:layout_marginEnd="168dp"
                 android:text="&quot;Mensaje Personalizado&quot;"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toEndOf="@+id/textView13"
-                tools:layout_editor_absoluteY="70dp" />
+                app:layout_constraintStart_toEndOf="@+id/btnEditContact3"
+                app:layout_constraintTop_toBottomOf="@+id/textView20" />
 
             <TextView
                 android:id="@+id/textView28"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:text="@string/txtViewLocation"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.065"
                 app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="106dp" />
+                app:layout_constraintTop_toBottomOf="@+id/textView21" />
 
             <com.google.android.gms.maps.MapView
                 android:id="@+id/mapView3"
                 android:layout_width="282dp"
                 android:layout_height="119dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.496"
                 app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="133dp" />
+                app:layout_constraintTop_toBottomOf="@+id/textView28"
+                app:layout_constraintVertical_bias="0.0" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
             android:background="#673AB7"
             android:backgroundTint="#673AB7">
 
-            <ImageButton
-                android:id="@+id/imageButton2"
-                android:layout_width="62dp"
-                android:layout_height="60dp"
-                android:backgroundTint="#673AB7"
-                android:src="@drawable/home_1_svgrepo_com"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="106dp"
+                android:layout_height="81dp"
+                android:layout_marginStart="76dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageButton5"
-                app:layout_constraintHorizontal_bias="0.357"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.16" />
+                app:layout_constraintVertical_bias="0.517">
 
-            <ImageButton
-                android:id="@+id/imageButton5"
-                android:layout_width="55dp"
-                android:layout_height="59dp"
-                android:layout_marginEnd="88dp"
-                android:backgroundTint="#673AB7"
-                android:src="@drawable/settings_svgrepo_com"
+                <ImageButton
+                    android:id="@+id/btnHomeEC"
+                    android:layout_width="62dp"
+                    android:layout_height="60dp"
+                    android:backgroundTint="#673AB7"
+                    android:src="@drawable/home_1_svgrepo_com"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/txtViewHome"
+                    android:textColor="#FFFFFF"
+                    android:textSize="17dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btnHomeEC" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="137dp"
+                android:layout_height="85dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.309"
+                app:layout_constraintStart_toEndOf="@+id/constraintLayout"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.156" />
+                app:layout_constraintVertical_bias="0.52">
 
-            <TextView
-                android:id="@+id/textView8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-medium"
-                android:text="@string/txtViewHome"
-                android:textColor="#FFFFFF"
-                android:textSize="17dp"
-                android:textStyle="bold"
-                tools:layout_editor_absoluteX="83dp"
-                tools:layout_editor_absoluteY="67dp" />
+                <ImageButton
+                    android:id="@+id/btnSettingsEC"
+                    android:layout_width="60dp"
+                    android:layout_height="57dp"
+                    android:backgroundTint="#673AB7"
+                    android:src="@drawable/settings_svgrepo_com"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.506"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/textView10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-medium"
-                android:text="@string/txtViewSettings"
-                android:textColor="#FFFFFF"
-                android:textSize="17dp"
-                android:textStyle="bold"
-                tools:layout_editor_absoluteX="240dp"
-                tools:layout_editor_absoluteY="67dp" />
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/txtViewSettings"
+                    android:textColor="#FFFFFF"
+                    android:textSize="17dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.551"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btnSettingsEC"
+                    app:layout_constraintVertical_bias="0.0" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

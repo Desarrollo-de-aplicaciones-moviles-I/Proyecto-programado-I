@@ -6,10 +6,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#673AB7"
-    tools:context=".RecoveryLinkActivity">
+    tools:context=".ChangePhoneActivity">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/btnBack2"
+        android:id="@+id/btnBack3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -25,11 +25,11 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <androidx.cardview.widget.CardView
-        android:layout_width="350dp"
-        android:layout_height="289dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_margin="32dp"
         app:cardCornerRadius="25dp"
-        app:cardElevation="8dp"
+        app:cardElevation="6dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,47 +37,57 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="32dp">
+            android:layout_height="219dp"
+            android:padding="24dp">
 
             <TextView
-                android:id="@+id/textView35"
-                android:layout_width="0dp"
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-medium"
-                android:text="@string/txtRecoveryMsg"
-                android:textAlignment="center"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="12dp"
+                android:text="@string/txtViewCurrentPhone"
+                app:layout_constraintEnd_toStartOf="@+id/txtViewCurrentPhone"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <Button
-                android:id="@+id/btnChangePhoneACP"
-                android:layout_width="282dp"
-                android:layout_height="66dp"
-                android:text="@string/btnGetRecoveryLink"
-                android:textSize="17sp"
-                app:layout_constraintBottom_toBottomOf="parent"
+            <EditText
+                android:id="@+id/editTxtPhone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:drawableLeft="@drawable/baseline_lock_24"
+                android:drawablePadding="8dp"
+                android:drawableTint="#5D5A5A"
+                android:ems="10"
+                android:hint="New phone"
+                android:inputType="textPassword"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTxtEmail"
-                app:layout_constraintVertical_bias="1.0" />
+                app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
-            <EditText
-                android:id="@+id/editTxtEmail"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:ems="10"
-                android:hint="Email"
-                android:inputType="text"
+            <Button
+                android:id="@+id/btnChangePhoneACP"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/btnChangePhone"
+                android:textSize="17dp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView35" />
+                app:layout_constraintTop_toBottomOf="@id/editTxtPhone" />
+
+            <TextView
+                android:id="@+id/txtViewCurrentPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="64dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>

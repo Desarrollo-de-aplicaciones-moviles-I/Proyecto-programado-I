@@ -10,6 +10,7 @@
     <string name="ErrorMsgGetC">Error when getting the contacts</string>
     <string name="ErrorMsgAddA">Error when adding the alert</string>
     <string name="ErrorMsgGetA">Error when getting the alerts</string>
+    <string name="ErrorMsgGetByEmail">Email was not found</string>
     <string name="WelcomeTittle">¡Welcome to SOS Puntarenas!</string>
     <string name="btnForgotPassword">Forgot password?</string>
     <string name="txtViewSignUp">Don´t have an account?</string>
@@ -34,9 +35,8 @@
     <string name="btnEditContact">Edit</string>
     <string name="btnAddContact">Add a new contact</string>
     <string name="txtViewTermsConditions">Terms and conditions</string>
-    <string name="txtViewChangeNumber">Change email</string>
     <string name="txtChangePass">Change password</string>
-    <string name="txtViewAbout">About</string>
+    <string name="txtViewAbout">About us</string>
     <string name="btnSignOut">Sign Out</string>
     <string name="txtViewChangeNumber">Change phone number</string>
     <string name="txtRecoveryMsg">We will send you a recovery link to your registered email</string>
@@ -45,4 +45,47 @@
     <string name="MsgPasswordUpdated">Password updated</string>
     <string name="MsgUserNotFound">User with ID not found</string>
     <string name="btnLogin">Log in</string>
+    <string name="MsgUserDuplicated">Username already exists</string>
+    <string name="ErrorMsgGetByUser">Username not found</string>
+    <string name="MsgDifferentPass">Passwords are different</string>
+    <string name="MsgSaveSuccess">User added successfully</string>
+    <string name="MsgMissingData">Theres thing to fill yet</string>
+    <string name="MsgWrongPass">Wrong password</string>
+    <string name="btnSaveContact">Save</string>
+    <string name="MsgDuplicatedContact">Contact already exists</string>
+    <string name="MsgDuplicatedNumberC">The phone number already exists</string>
+    <string name="MsgDeleteSuccess">Deleted successfully</string>
+    <string name="MsgLinkSent">Recovery link was sent</string>
+    <string name="txtViewAboutUsDesc">
+        SOS Puntarenas is a mobile web application created to strengthen the safety and well-being of people in our region. Our goal is to offer a reliable tool that allows users to react quickly and effectively in an emergency.\n\n
+        With just one tap, users can send an emergency alert along with their real-time location to their trusted contacts, ensuring that help arrives exactly when it’s needed most.\n\n
+        The platform is designed to be intuitive, accessible, and efficient, making it easy to use anytime and anywhere. It also allows users to register emergency contacts, review the history of sent alerts, and manage their account with ease.\n\n
+        At SOS Puntarenas, we believe that technology can save lives when it is used in the service of the community. That’s why we work to provide every user with safety, trust, and peace of mind—always within reach.
+    </string>
+    <string name="txtViewTermsConditionsDesc">
+        Last updated: 11/10/2025\n\n
+        Welcome to SOS Puntarenas, a mobile web application created to enhance personal safety in the region. By using this platform, you agree to the following terms:\n\n
+        1. Use of Service\n\n
+        SOS Puntarenas allows users to send emergency alerts with real-time location to trusted contacts.\n
+        The app does not replace official emergency services. Its purpose is complementary and depends on the proper functioning of the device and internet connection.\n\n
+        2. User Registration and Responsibility\n\n
+        To use the app, you must create an account with accurate information and keep it up to date.\n
+        You are responsible for protecting your credentials and for not using the app to send false alerts or for improper purposes.\n\n
+        3. Privacy and Data\n\n
+        We collect personal data (such as name, email, and location) only to provide the service.\n
+        We do not share your information with third parties without your consent. You may request deletion of your account and data at any time.\n\n
+        4. Limitation of Liability\n\n
+        SOS Puntarenas is not responsible for technical failures, network errors, or any damages resulting from the use of the service.\n
+        The user agrees that the use of the app is at their own risk.\n\n
+        5. Ownership and Modifications\n\n
+        The name, logo, and design of SOS Puntarenas belong to its creators.\n
+        We may update these terms at any time; continued use of the app implies acceptance of the modifications.\n\n
+        6. Contact\n\n
+        For inquiries or support, please contact us at:\n
+        lamonteroca@est.utn.ac.cr
+    </string>
+    <string name="MsgPhoneUpdated">Phone updated successfully</string>
+    <string name="txtViewCurrentPhone">Current number phone:</string>
+    <string name="btnChangePhone">Change phone number</string>
+
 </resources>

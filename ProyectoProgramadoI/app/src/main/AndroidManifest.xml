@@ -12,6 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProyectoProgramadoI">
         <activity
+            android:name=".ChangePhoneActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TermsConditionsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AboutUsActivity"
+            android:exported="false" />
+        <activity
             android:name=".ChangePasswordActivity"
             android:exported="false" />
         <activity
@@ -33,10 +42,10 @@
             android:name=".SignUpActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
