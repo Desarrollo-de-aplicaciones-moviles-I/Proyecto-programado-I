@@ -30,16 +30,27 @@ object MemoryDataManager: IDataManagerAlert, IDataManagerContact, IDataManagerUs
     }
 
     override fun updateContact(contact: EmergencyContact){
-        removeContact(contact.Id)
+        removeContact(contact.Name)
         addContact(contact)
     }
 
-    override fun removeContact(id: Int){
-        eContactList.removeIf { it.Id == id }
+    override fun removeContact(name: String){
+        eContactList.removeIf { it.Name == name }
     }
 
-    override fun getEContactsByUser(idUser: Int): List<EmergencyContact>{
-        return eContactList.filter { it.IdUser == idUser }
+    override fun getEContactsByUser(nameUser: String): List<EmergencyContact>{
+        return eContactList.filter { it.NameUser == nameUser }
+    }
+
+    override fun getEContactsByName(nameContact: String): EmergencyContact?{
+        val result = eContactList.filter { it.Name.trim() == nameContact.trim() }
+        return if(result.any()) result[0] else null
+    }
+
+    override fun getEContactsByPhone(phoneContact: String): EmergencyContact? {
+        val result = eContactList.filter { it.PhoneNumber.trim() == phoneContact.trim() }
+        return if(result.any()) result[0] else null
+
     }
 
     //--------------------------------------------------
@@ -48,14 +59,17 @@ object MemoryDataManager: IDataManagerAlert, IDataManagerContact, IDataManagerUs
         userList.add(user)
     }
 
-    override fun updatePassword(context: Context, userId: Int, newPassword: String) {
-        val user = userList.find { it.Id == userId }
-        if (user != null) {
-            user.Contrasena = newPassword
+    override fun updatePassword(context: Context, username: String, newPassword: String) {
+        val username = userList.find { it.Username == username }
+        if (username != null) {
+            username.Password = newPassword
             println(context.getString(R.string.MsgPasswordUpdated))
         } else {
             println(context.getString(R.string.MsgUserNotFound))
         }
-    }
 
+    override fun getByUsername(username: String): User?{
+        val result = userList.filter { it.Username.trim() == username.trim() }
+        return if(result.any()) result[0] else null
+    }
 }

@@ -33,7 +33,6 @@
     <string name="btnEditContact">Editar</string>
     <string name="btnAddContact">Añadir nuevo contacto</string>
     <string name="txtViewTermsConditions">Términos y condiciones</string>
-    <string name="txtViewChangeNumber">Cambiar correo</string>
     <string name="txtChangePass">Cambiar contraseña</string>
     <string name="txtViewAbout">Acerca de</string>
     <string name="btnSignOut">Cerrar sesión</string>
@@ -44,4 +43,14 @@
     <string name="MsgPasswordUpdated">Contraseña actualizada</string>
     <string name="MsgUserNotFound">Usuario con ID no encontrado</string>
     <string name="btnLogin">Iniciar sesión</string>
+    <string name="MsgUserDuplicated">El nombre de usuario ya existe</string>
+    <string name="ErrorMsgGetByUser">Username no encontrado</string>
+    <string name="MsgDifferentPass">Las contraseñas no coinciden</string>
+    <string name="MsgSaveSuccess">Usuario creado satisfactoriamente</string>
+    <string name="MsgMissingData">Hay campos en blanco</string>
+    <string name="MsgWrongPass">Contraseña incorrecta</string>
+    <string name="btnSaveContact">Guardar</string>
+    <string name="MsgDuplicatedContact">Ya añadiste este contacto</string>
+    <string name="MsgDuplicatedNumberC">El número de teléfono ya fue añadido anteriormente</string>
+    <string name="MsgDeleteSuccess">Contacto borrado satisfactoriamente</string>
 </resources>

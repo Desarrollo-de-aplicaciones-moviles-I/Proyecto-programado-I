@@ -21,7 +21,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="75dp"
                 android:background="#DFDFDC"
-                android:src="@drawable/logo"
+                android:src="@mipmap/soslogo_foreground"
                 app:layout_constraintStart_toStartOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -30,7 +30,7 @@
             android:layout_height="277dp">
 
             <TextView
-                android:id="@+id/textView11"
+                android:id="@+id/editTextNameC"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/date_range_svgrepo_com"
@@ -38,13 +38,13 @@
                 android:drawableTint="#5D5A5A"
                 android:fontFamily="sans-serif-medium"
                 android:text="10/10/2025"
-                app:layout_constraintEnd_toStartOf="@+id/textView12"
+                app:layout_constraintEnd_toStartOf="@+id/editTextPhoneC"
                 app:layout_constraintHorizontal_bias="0.098"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:layout_editor_absoluteY="24dp" />
 
             <TextView
-                android:id="@+id/textView12"
+                android:id="@+id/editTextPhoneC"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="84dp"
@@ -54,7 +54,7 @@
                 tools:layout_editor_absoluteY="24dp" />
 
             <TextView
-                android:id="@+id/textView13"
+                android:id="@+id/btnEditContact3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/txtViewMsg"
@@ -64,14 +64,14 @@
                 tools:layout_editor_absoluteY="70dp" />
 
             <TextView
-                android:id="@+id/textView14"
+                android:id="@+id/btnDeleteContact"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="168dp"
                 android:text="&quot;Mensaje Personalizado&quot;"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toEndOf="@+id/textView13"
+                app:layout_constraintStart_toEndOf="@+id/btnEditContact3"
                 tools:layout_editor_absoluteY="70dp" />
 
             <TextView
@@ -145,7 +145,7 @@
                 android:text="&quot;Mensaje Personalizado&quot;"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toEndOf="@+id/textView13"
+                app:layout_constraintStart_toEndOf="@+id/btnEditContact3"
                 tools:layout_editor_absoluteY="70dp" />
 
             <TextView
@@ -175,20 +175,20 @@
             android:backgroundTint="#673AB7">
 
             <ImageButton
-                android:id="@+id/imageButton2"
+                android:id="@+id/btnHomeEC"
                 android:layout_width="62dp"
                 android:layout_height="60dp"
                 android:backgroundTint="#673AB7"
                 android:src="@drawable/home_1_svgrepo_com"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageButton5"
+                app:layout_constraintEnd_toStartOf="@+id/btnSettingsEC"
                 app:layout_constraintHorizontal_bias="0.357"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.16" />
 
             <ImageButton
-                android:id="@+id/imageButton5"
+                android:id="@+id/btnSettingsEC"
                 android:layout_width="55dp"
                 android:layout_height="59dp"
                 android:layout_marginEnd="88dp"

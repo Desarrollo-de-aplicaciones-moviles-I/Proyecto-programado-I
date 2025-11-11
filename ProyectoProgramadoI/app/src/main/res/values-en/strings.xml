@@ -34,7 +34,6 @@
     <string name="btnEditContact">Edit</string>
     <string name="btnAddContact">Add a new contact</string>
     <string name="txtViewTermsConditions">Terms and conditions</string>
-    <string name="txtViewChangeNumber">Change email</string>
     <string name="txtChangePass">Change password</string>
     <string name="txtViewAbout">About</string>
     <string name="btnSignOut">Sign Out</string>
@@ -45,4 +44,14 @@
     <string name="MsgPasswordUpdated">Password updated</string>
     <string name="MsgUserNotFound">User with ID not found</string>
     <string name="btnLogin">Log in</string>
+    <string name="MsgUserDuplicated">Username already exists</string>
+    <string name="ErrorMsgGetByUser">Username not found</string>
+    <string name="MsgDifferentPass">Passwords are different</string>
+    <string name="MsgSaveSuccess">User added successfully</string>
+    <string name="MsgMissingData">Theres thing to fill yet</string>
+    <string name="MsgWrongPass">Wrong password</string>
+    <string name="btnSaveContact">Save</string>
+    <string name="MsgDuplicatedContact">Contact already exists</string>
+    <string name="MsgDuplicatedNumberC">The phone number already exists</string>
+    <string name="MsgDeleteSuccess">Deleted successfully</string>
 </resources>

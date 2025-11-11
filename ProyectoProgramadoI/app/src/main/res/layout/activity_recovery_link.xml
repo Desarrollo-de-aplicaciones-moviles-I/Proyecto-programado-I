@@ -36,11 +36,11 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toTopOf="@id/button3"
+                app:layout_constraintBottom_toTopOf="@id/btnSignUpSU"
                 android:layout_marginBottom="32dp" />
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/btnSignUpSU"
                 android:layout_width="282dp"
                 android:layout_height="66dp"
                 android:text="@string/btnGetRecoveryLink"

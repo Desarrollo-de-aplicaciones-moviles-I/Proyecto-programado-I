@@ -5,6 +5,7 @@ import android.content.Context
 
 interface IDataManagerUser {
     fun addUser(user: User)
-    fun updatePassword(context: Context, userId: Int, newPassword: String)
+    fun updatePassword(context: Context, username: String, newPassword: String)
+    fun getByUsername(username: String): User?
 
 }

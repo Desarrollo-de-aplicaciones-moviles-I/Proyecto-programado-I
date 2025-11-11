@@ -1,6 +1,8 @@
 package com.example.proyectoprogramadoi
 
 import android.os.Bundle
+import android.view.View
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -16,5 +18,11 @@ class ConfigurationActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        val btnLogOutS: TextView = findViewById<TextView>(R.id.btnLogOutS)
+        btnLogOutS.setOnClickListener(View.OnClickListener{ view ->
+            Util.Util.openActivity(this, LoginActivity::class.java)
+        })
+
     }
 }

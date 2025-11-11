@@ -22,7 +22,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="75dp"
                 android:background="#DFDFDC"
-                android:src="@drawable/logo"
+                android:src="@mipmap/soslogo_foreground"
                 app:layout_constraintStart_toStartOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -105,7 +105,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
-                    android:id="@+id/floatingActionButton2"
+                    android:id="@+id/btnAlertHistory"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:clickable="true"
@@ -118,7 +118,7 @@
                     tools:layout_editor_absoluteY="53dp" />
 
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
-                    android:id="@+id/floatingActionButton"
+                    android:id="@+id/btnEmergencyC"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:clickable="true"
@@ -179,7 +179,7 @@
             android:layout_height="72dp">
 
             <TextView
-                android:id="@+id/textView34"
+                android:id="@+id/btnLogOutS"
                 android:layout_width="138dp"
                 android:layout_height="27dp"
                 android:layout_marginTop="20dp"
@@ -214,20 +214,20 @@
             android:backgroundTint="#673AB7">
 
             <ImageButton
-                android:id="@+id/imageButton2"
+                android:id="@+id/btnHomeEC"
                 android:layout_width="62dp"
                 android:layout_height="60dp"
                 android:backgroundTint="#673AB7"
                 android:src="@drawable/home_1_svgrepo_com"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageButton5"
+                app:layout_constraintEnd_toStartOf="@+id/btnSettingsEC"
                 app:layout_constraintHorizontal_bias="0.357"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.16" />
 
             <ImageButton
-                android:id="@+id/imageButton5"
+                android:id="@+id/btnSettingsEC"
                 android:layout_width="55dp"
                 android:layout_height="59dp"
                 android:layout_marginEnd="88dp"

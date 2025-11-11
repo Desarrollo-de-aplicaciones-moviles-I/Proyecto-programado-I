@@ -22,12 +22,21 @@ class UserController {
         }
     }
 
-    fun updatePass(context: Context, userId: Int, newPassword: String){
+    fun updatePass(context: Context, username: String, newPassword: String){
         try {
-            dataManager.updatePassword(context, userId, newPassword)
+            dataManager.updatePassword(context, username, newPassword)
         }catch (e: Exception){
             throw Exception(context.getString(R.string.ErrorMsgUpdPass))
         }
     }
+
+    fun getByUsername(username:String): User?{
+        try {
+            return dataManager.getByUsername(username)
+        }catch (e: Exception){
+            throw Exception(context.getString(R.string.ErrorMsgGetByUser))
+        }
+    }
+
 
 }
