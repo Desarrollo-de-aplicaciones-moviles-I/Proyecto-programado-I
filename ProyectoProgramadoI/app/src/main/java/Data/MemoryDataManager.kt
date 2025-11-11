@@ -66,7 +66,6 @@ object MemoryDataManager: IDataManagerAlert, IDataManagerContact, IDataManagerUs
         } else {
             println(context.getString(R.string.MsgUserNotFound))
         }
-    }
 
     override fun getByUsername(username: String): User?{
         val result = userList.filter { it.Username.trim() == username.trim() }
@@ -85,4 +84,5 @@ object MemoryDataManager: IDataManagerAlert, IDataManagerContact, IDataManagerUs
     override fun changePhone(user: User, phone: String) {
         user.PhoneNumber = phone
     }
+    
 }

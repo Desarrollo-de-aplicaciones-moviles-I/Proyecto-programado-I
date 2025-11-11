@@ -1,5 +1,6 @@
 package com.example.proyectoprogramadoi
 
+
 import Controller.ContactController
 import Entity.EmergencyContact
 import android.os.Bundle
@@ -254,3 +255,4 @@ class EmergencyContactActivity : AppCompatActivity() {
     }
 
 }
+

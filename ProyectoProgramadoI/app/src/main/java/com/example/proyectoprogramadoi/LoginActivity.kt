@@ -1,5 +1,6 @@
 package com.example.proyectoprogramadoi
 
+
 import Controller.UserController
 import Entity.User
 import android.os.Bundle
@@ -42,6 +43,7 @@ class LoginActivity : AppCompatActivity() {
         btnForgotPassword.setOnClickListener(View.OnClickListener { view ->
             Util.Util.openActivity(this, RecoveryLinkActivity::class.java)
         })
+
 
         val btnLogin: Button = findViewById<Button>(R.id.btnLogin)
         btnLogin.setOnClickListener(View.OnClickListener { view ->
