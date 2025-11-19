@@ -1,7 +1,6 @@
 package Entity
 
 class User {
-
     private var username: String=""
     private var email: String=""
     private var password: String=""
@@ -33,5 +32,5 @@ class User {
     var PhoneNumber: String
         get() = this.phoneNumber
         set(value) {this.phoneNumber=value}
-        
+
 }

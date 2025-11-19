@@ -4,11 +4,9 @@ package com.example.proyectoprogramadoi
 import Controller.UserController
 import Entity.User
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
-import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -16,7 +14,6 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import java.lang.Exception
-import java.time.LocalDate
 
 class SignUpActivity : AppCompatActivity() {
     private lateinit var txtUsername: EditText
@@ -40,8 +37,8 @@ class SignUpActivity : AppCompatActivity() {
         txtUsername = findViewById<EditText>(R.id.editTxtUsernameSU)
         txtEmail = findViewById<EditText>(R.id.editTxtEmailSU)
         txtPhone = findViewById<EditText>(R.id.editTxtPhoneSU)
-        txtPassword = findViewById<EditText>(R.id.editTxtPasswordSU)
-        txtCPassword = findViewById<EditText>(R.id.editTxtCPasswordSU)
+        txtPassword = findViewById<EditText>(R.id.editTxtPassSU)
+        txtCPassword = findViewById<EditText>(R.id.editTxtCPassSU)
 
         val btnBack: FloatingActionButton = findViewById<FloatingActionButton>(R.id.btnBack)
         btnBack.setOnClickListener {
@@ -53,7 +50,7 @@ class SignUpActivity : AppCompatActivity() {
             cleanScreen()
         }
 
-        val btnSignUpSU: Button = findViewById<Button>(R.id.btnSignUpSU)
+        val btnSignUpSU: Button = findViewById<Button>(R.id.btnCreateAccountSU)
         btnSignUpSU.setOnClickListener {
             savePerson()
         }
@@ -92,6 +89,7 @@ class SignUpActivity : AppCompatActivity() {
                         cleanScreen()
                         Toast.makeText(this, R.string.MsgSaveSuccess
                             , Toast.LENGTH_LONG).show()
+                        finish()
                     }else{
                         Toast.makeText(this, R.string.MsgDifferentPass
                             , Toast.LENGTH_LONG).show()

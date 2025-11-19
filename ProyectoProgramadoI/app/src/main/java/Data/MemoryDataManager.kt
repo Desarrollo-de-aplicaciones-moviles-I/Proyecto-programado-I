@@ -4,6 +4,7 @@ import Entity.Alert
 import Entity.EmergencyContact
 import Entity.User
 import android.content.Context
+import com.example.proyectoprogramadoi.LoginActivity
 import com.example.proyectoprogramadoi.R
 
 object MemoryDataManager: IDataManagerAlert, IDataManagerContact, IDataManagerUser{
@@ -11,7 +12,6 @@ object MemoryDataManager: IDataManagerAlert, IDataManagerContact, IDataManagerUs
     private var alertList = mutableListOf<Alert>()
     private var eContactList= mutableListOf<EmergencyContact>()
     private var userList = mutableListOf<User>()
-
 
     //--------------------------------------------------
     //ALERTS
@@ -50,7 +50,6 @@ object MemoryDataManager: IDataManagerAlert, IDataManagerContact, IDataManagerUs
     override fun getEContactsByPhone(phoneContact: String): EmergencyContact? {
         val result = eContactList.filter { it.PhoneNumber.trim() == phoneContact.trim() }
         return if(result.any()) result[0] else null
-
     }
 
     //--------------------------------------------------
@@ -72,4 +71,18 @@ object MemoryDataManager: IDataManagerAlert, IDataManagerContact, IDataManagerUs
         val result = userList.filter { it.Username.trim() == username.trim() }
         return if(result.any()) result[0] else null
     }
+
+    override fun getByEmail(email: String): User?{
+        val result = userList.filter { it.Email.trim() == email.trim() }
+        return if(result.any()) result[0] else null
+    }
+
+    override fun changePassword(user: User, password: String) {
+        user.Password = password
+    }
+
+    override fun changePhone(user: User, phone: String) {
+        user.PhoneNumber = phone
+    }
+    
 }

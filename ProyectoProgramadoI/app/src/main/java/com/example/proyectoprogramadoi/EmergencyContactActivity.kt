@@ -3,14 +3,10 @@ package com.example.proyectoprogramadoi
 
 import Controller.ContactController
 import Entity.EmergencyContact
-import Entity.User
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuInflater
 import android.view.View
 import android.widget.EditText
 import android.widget.ImageButton
-import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -18,7 +14,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.proyectoprogramadoi.LoginActivity
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import java.lang.Exception
 

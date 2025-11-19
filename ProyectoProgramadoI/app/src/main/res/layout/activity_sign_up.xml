@@ -39,7 +39,7 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/btnSignUpSU"
+                android:id="@+id/btnCreateAccountSU"
                 android:layout_width="0dp"
                 android:layout_height="46dp"
                 android:layout_marginStart="40dp"
@@ -49,7 +49,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTxtCPasswordSU" />
+                app:layout_constraintTop_toBottomOf="@+id/editTxtCPassSU" />
 
             <EditText
                 android:id="@+id/editTxtEmailSU"
@@ -69,7 +69,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/editTxtUsernameSU" />
 
             <EditText
-                android:id="@+id/editTxtCPasswordSU"
+                android:id="@+id/editTxtCPassSU"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
@@ -82,10 +82,10 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.497"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTxtPasswordSU" />
+                app:layout_constraintTop_toBottomOf="@+id/editTxtPassSU" />
 
             <EditText
-                android:id="@+id/editTxtPasswordSU"
+                android:id="@+id/editTxtPassSU"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
