@@ -3,6 +3,7 @@ package Controller
 import Data.IDataManagerAlert
 import Data.MemoryDataManager
 import Entity.Alert
+import Entity.EmergencyContact
 import android.content.Context
 import com.example.proyectoprogramadoi.R
 
@@ -22,11 +23,21 @@ class AlertController {
         }
     }
 
-    fun getAlertByU(idUser: Int){
+    fun getAlertByU(idUser: String): List<Alert>{
         try {
-            dataManager.getAlertByUser(idUser)
+            return dataManager.getAlertByUser(idUser)
         }catch (e: Exception){
             throw Exception(context.getString(R.string.ErrorMsgGetA))
         }
     }
+
+    fun createID(): Int{
+        try {
+            return dataManager.createUniqueID()
+        }catch (e: Exception){
+            throw Exception(e)
+        }
+    }
+
+
 }

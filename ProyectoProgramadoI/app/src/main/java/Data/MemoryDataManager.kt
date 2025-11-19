@@ -19,10 +19,19 @@ object MemoryDataManager: IDataManagerAlert, IDataManagerContact, IDataManagerUs
         alertList.add(alert)
     }
 
-    override fun getAlertByUser(idUser: Int): List<Alert>{
+    override fun getAlertByUser(idUser: String): List<Alert>{
         return alertList.filter { it.IdUser == idUser }
     }
 
+    override fun getAll() = alertList
+
+    override fun createUniqueID(): Int {
+        var newID: Int
+        do {
+            newID = (1..999999).random()
+        } while (alertList.any { it.IdAlert == newID })
+        return newID
+    }
     //--------------------------------------------------
     // CONTACTS
     override fun addContact(contact: EmergencyContact){
@@ -66,6 +75,7 @@ object MemoryDataManager: IDataManagerAlert, IDataManagerContact, IDataManagerUs
         } else {
             println(context.getString(R.string.MsgUserNotFound))
         }
+    }
 
     override fun getByUsername(username: String): User?{
         val result = userList.filter { it.Username.trim() == username.trim() }
@@ -84,5 +94,4 @@ object MemoryDataManager: IDataManagerAlert, IDataManagerContact, IDataManagerUs
     override fun changePhone(user: User, phone: String) {
         user.PhoneNumber = phone
     }
-    
 }

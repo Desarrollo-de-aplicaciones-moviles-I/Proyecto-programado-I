@@ -87,5 +87,8 @@
     <string name="MsgPhoneUpdated">Phone updated successfully</string>
     <string name="txtViewCurrentPhone">Current number phone:</string>
     <string name="btnChangePhone">Change phone number</string>
+    <string name="MsgAlertSuccessfully">Alert sent succesfully</string>
+    <string name="MsgAddContactFirst">You have to add a contact first</string>
+    <string name="MsgAddAlertFirst">You have to add an alert first</string>
 
 </resources>
