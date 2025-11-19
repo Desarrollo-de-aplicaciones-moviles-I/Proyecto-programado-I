@@ -1,17 +1,19 @@
 package Entity
 
-import java.util.Date
+import java.time.LocalDateTime
 
 class Alert {
     private var idAlert: Int=0
-    private lateinit var dateAlert: Date
-    private var message: String=""
+    private lateinit var dateAlert: LocalDateTime
+    private var message: String? = null
     private var latitude: Int=0
     private var longitude: Int=0
-    private var idUser: Int=0
+    private lateinit var idUser: String
 
-    constructor(idAlert: Int, fechaAlerta: Date, mensaje:String
-                , latitud: Int, longitud: Int,  idUser: Int){
+    constructor()
+
+    constructor(idAlert: Int, fechaAlerta: LocalDateTime, mensaje:String
+                , latitud: Int, longitud: Int,  idUser: String){
         this.idAlert=idAlert
         this.dateAlert=fechaAlerta
         this.message=mensaje
@@ -24,23 +26,23 @@ class Alert {
         get() = this.idAlert
         set(value) {this.idAlert=value}
 
-    var FechaAlerta: Date
+    var DateAlert: LocalDateTime
         get() = this.dateAlert
         set(value) {this.dateAlert=value}
 
-    var Mensaje: String
+    var Message: String?
         get() = this.message
         set(value) {this.message=value}
 
-    var Latitud: Int
+    var Latitude: Int
         get() = this.latitude
         set(value) {this.latitude=value}
 
-    var Longitud: Int
+    var Longitude: Int
         get() = this.longitude
         set(value) {this.longitude=value}
 
-    var IdUser: Int
+    var IdUser: String
         get() = this.idUser
         set(value) {this.idUser=value}
 }

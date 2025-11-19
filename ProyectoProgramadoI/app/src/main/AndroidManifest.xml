@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProyectoProgramadoI">
         <activity
+            android:name=".AlertListActivity"
+            android:exported="false" />
+        <activity
             android:name=".ChangePhoneActivity"
             android:exported="false" />
         <activity
