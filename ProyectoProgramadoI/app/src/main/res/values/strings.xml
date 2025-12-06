@@ -86,5 +86,8 @@
     <string name="MsgPhoneUpdated">Teléfono actulizado con éxito</string>
     <string name="txtViewCurrentPhone">Teléfono actual:</string>
     <string name="btnChangePhone">Cambiar teléfono</string>
+    <string name="MsgAlertSuccessfully">Alerta enviada satisfactoriamente</string>
+    <string name="MsgAddContactFirst">Debes agregar un contacto primero</string>
+    <string name="MsgAddAlertFirst">Primero debes añadir una alerta</string>
 
 </resources>

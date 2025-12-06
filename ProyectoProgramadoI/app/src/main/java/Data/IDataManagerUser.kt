@@ -10,5 +10,4 @@ interface IDataManagerUser {
     fun getByEmail(email: String):User?
     fun changePassword(user: User, password: String)
     fun changePhone(user: User, phone: String)
-    
 }
