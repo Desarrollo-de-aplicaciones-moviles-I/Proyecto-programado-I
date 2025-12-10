@@ -31,24 +31,38 @@
             android:layout_height="133dp">
 
             <TextView
-                android:id="@+id/textView25"
+                android:id="@+id/txtViewNameC3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-medium"
                 android:text="- Nombre de contacto 2 (8282 1133)"
                 android:textSize="15dp"
+                android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.165"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView24"
-                app:layout_constraintVertical_bias="0.428" />
+                app:layout_constraintTop_toBottomOf="@+id/txtViewNameC2" />
+
+            <TextView
+                android:id="@+id/txtViewNameC2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="- Nombre de contacto 2 (8282 1133)"
+                android:textSize="15dp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.165"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtViewNameC1" />
 
             <TextView
                 android:id="@+id/textView23"
                 android:layout_width="237dp"
                 android:layout_height="21dp"
-                android:layout_marginTop="28dp"
+                android:layout_marginTop="16dp"
                 android:fontFamily="sans-serif-medium"
                 android:text="@string/txtViewSendingMsgTo"
                 android:textSize="17dp"
@@ -58,13 +72,14 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textView24"
+                android:id="@+id/txtViewNameC1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="8dp"
                 android:fontFamily="sans-serif-medium"
                 android:text="- Nombre de contacto 1 (8181 0022)"
                 android:textSize="15dp"
+                android:visibility="invisible"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.165"
                 app:layout_constraintStart_toStartOf="parent"
@@ -132,6 +147,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtInputCMessage"
                 android:layout_width="320dp"
                 android:layout_height="62dp"
                 android:layout_marginTop="16dp"
@@ -157,26 +173,16 @@
             android:layout_height="76dp">
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/btnSendAlertA"
                 android:layout_width="130dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="40dp"
-                android:layout_marginEnd="40dp"
                 android:text="@string/btnSendNow"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/button4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <Button
-                android:id="@+id/button4"
-                android:layout_width="130dp"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="40dp"
-                android:text="@string/btnCancel"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
