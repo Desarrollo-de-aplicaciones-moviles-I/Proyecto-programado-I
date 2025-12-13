@@ -1,6 +1,5 @@
 package Interfaces
 
-import Entity.Alert
 import Entity.DTOAlert
 
 interface OnItemClickListener {

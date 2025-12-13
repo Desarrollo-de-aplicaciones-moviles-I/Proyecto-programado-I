@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var alertController: AlertController
     lateinit var myContext: Context
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()

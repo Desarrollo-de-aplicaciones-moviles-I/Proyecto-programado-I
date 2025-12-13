@@ -31,6 +31,7 @@ class AlertActivity : AppCompatActivity() {
     private lateinit var txtViewNameC3: TextView
     val nombreUsuario = LoginActivity.currentUserName
     lateinit var myContext: Context
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
