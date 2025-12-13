@@ -1,15 +1,26 @@
 package com.example.proyectoprogramadoi
 
+import Controller.AlertController
+import Controller.ContactController
+import android.content.Context
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.lifecycle.lifecycleScope
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var contactController: ContactController
+    private lateinit var alertController: AlertController
+    lateinit var myContext: Context
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -20,9 +31,21 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
+        contactController = ContactController(this)
+        alertController = AlertController(this)
+        val nombreUsuario = LoginActivity.currentUserName
+        myContext = this
+
         val btnSendAlert: Button = findViewById<Button>(R.id.btnSendAlert)
         btnSendAlert.setOnClickListener {
-            Util.Util.openActivity(this, AlertActivity::class.java)
+            lifecycleScope.launch{
+                val contacts = contactController.getEContactsByU(nombreUsuario)
+                if(contacts.isEmpty())
+                    Toast.makeText(myContext, R.string.MsgAddContactFirst
+                        , Toast.LENGTH_LONG).show()
+                else
+                    Util.Util.openActivity(myContext, AlertActivity::class.java)
+            }
         }
 
         val btnEmergencyC: FloatingActionButton = findViewById<FloatingActionButton>(R.id.btnEmergencyContactsM)
@@ -32,7 +55,15 @@ class MainActivity : AppCompatActivity() {
 
         val btnAlertHistory: FloatingActionButton = findViewById<FloatingActionButton>(R.id.btnAlertHistory)
         btnAlertHistory.setOnClickListener {
-            Util.Util.openActivity(this, AlertHistoryActivity::class.java)
+            lifecycleScope.launch {
+                val alerts = alertController.getAlertByU(nombreUsuario)
+                if(alerts.isEmpty())
+                    Toast.makeText(myContext, R.string.MsgAddAlertFirst
+                        , Toast.LENGTH_LONG).show()
+                else
+                    Util.Util.openActivity(myContext, AlertListActivity::class.java)
+
+            }
         }
 
         val btnSettings: ImageButton = findViewById<ImageButton>(R.id.btnSettingsEC)

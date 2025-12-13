@@ -1,8 +1,8 @@
 package com.example.proyectoprogramadoi
 
-
 import Controller.UserController
 import Entity.User
+import android.content.Context
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -12,7 +12,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.lifecycle.lifecycleScope
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import kotlinx.coroutines.launch
 import java.lang.Exception
 
 class SignUpActivity : AppCompatActivity() {
@@ -22,6 +24,8 @@ class SignUpActivity : AppCompatActivity() {
     private lateinit var txtPassword: EditText
     private lateinit var txtCPassword: EditText
     private lateinit var userController: UserController
+
+    lateinit var myContext: Context
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,6 +43,7 @@ class SignUpActivity : AppCompatActivity() {
         txtPhone = findViewById<EditText>(R.id.editTxtPhoneSU)
         txtPassword = findViewById<EditText>(R.id.editTxtPassSU)
         txtCPassword = findViewById<EditText>(R.id.editTxtCPassSU)
+        myContext = this
 
         val btnBack: FloatingActionButton = findViewById<FloatingActionButton>(R.id.btnBack)
         btnBack.setOnClickListener {
@@ -72,37 +77,41 @@ class SignUpActivity : AppCompatActivity() {
     }
 
     fun savePerson(){
-        try {
-            if (isValidatedData()){
-                if (userController.getByUsername(txtUsername.text.toString()) != null){
-                    Toast.makeText(this, R.string.MsgUserDuplicated
-                        , Toast.LENGTH_LONG).show()
-                }else{
-                    val user = User()
-                    user.Username = txtUsername.text.toString()
-                    user.Email = txtEmail.text.toString()
-                    user.PhoneNumber = txtPhone.text.toString()
-                    val samePass = txtPassword.text.toString()
-                    if (samePass == txtCPassword.text.toString()){
-                        user.Password = txtPassword.text.toString()
-                        userController.addU(user)
-                        cleanScreen()
-                        Toast.makeText(this, R.string.MsgSaveSuccess
+        lifecycleScope.launch {
+            try {
+                if (isValidatedData()){
+                    if (userController.getByUsername(txtUsername.text.toString()) != null){
+                        Toast.makeText(myContext, R.string.MsgUserDuplicated
                             , Toast.LENGTH_LONG).show()
-                        finish()
                     }else{
-                        Toast.makeText(this, R.string.MsgDifferentPass
-                            , Toast.LENGTH_LONG).show()
+                        val user = User()
+                        user.Username = txtUsername.text.toString()
+                        user.Email = txtEmail.text.toString()
+                        user.PhoneNumber = txtPhone.text.toString()
+                        val samePass = txtPassword.text.toString()
+                        if (samePass == txtCPassword.text.toString()){
+                            user.Password = txtPassword.text.toString()
+                            userController.addU(user)
+                            cleanScreen()
+                            Toast.makeText(myContext, R.string.MsgSaveSuccess
+                                , Toast.LENGTH_LONG).show()
+                            finish()
+                        }else{
+                            Toast.makeText(myContext, R.string.MsgDifferentPass
+                                , Toast.LENGTH_LONG).show()
+                        }
                     }
+                }else{
+                    Toast.makeText(myContext, R.string.MsgMissingData
+                        , Toast.LENGTH_LONG).show()
                 }
-            }else{
-                Toast.makeText(this, R.string.MsgMissingData
+            }catch (e: Exception){
+                Toast.makeText(myContext, e.message.toString()
                     , Toast.LENGTH_LONG).show()
             }
-        }catch (e: Exception){
-            Toast.makeText(this, e.message.toString()
-                , Toast.LENGTH_LONG).show()
+
         }
+
     }
 
 }

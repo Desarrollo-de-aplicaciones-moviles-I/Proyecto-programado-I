@@ -4,5 +4,7 @@ import Entity.Alert
 
 interface IDataManagerAlert {
     fun addAlert(alert: Alert)
-    fun getAlertByUser(idUser: Int): List<Alert>
+    fun getAlertByUser(idUser: String): List<Alert>
+    fun getAll(): List<Alert>
+    fun createUniqueID(): Int
 }

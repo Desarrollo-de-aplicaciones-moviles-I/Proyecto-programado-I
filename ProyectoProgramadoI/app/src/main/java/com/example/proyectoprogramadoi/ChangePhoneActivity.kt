@@ -1,6 +1,7 @@
 package com.example.proyectoprogramadoi
 
 import Controller.UserController
+import android.content.Context
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -11,13 +12,16 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.lifecycle.lifecycleScope
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import kotlinx.coroutines.launch
 import java.lang.Exception
 
 class ChangePhoneActivity : AppCompatActivity() {
     private lateinit var editTxtPhone: EditText
     private lateinit var userController: UserController
     private lateinit var txtViewCurrentPhone: TextView
+    lateinit var myContext: Context
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,6 +36,7 @@ class ChangePhoneActivity : AppCompatActivity() {
         userController = UserController(this)
         editTxtPhone = findViewById<EditText>(R.id.editTxtPhone)
         txtViewCurrentPhone = findViewById<TextView>(R.id.txtViewCurrentPhone)
+        myContext = this
 
         loadCurrentPhone()
 
@@ -47,24 +52,27 @@ class ChangePhoneActivity : AppCompatActivity() {
     }
 
     fun changePhone(){
-        try {
-            if(isValidatedData()){
-                val currentUsername = LoginActivity.currentUserName
-                val user = userController.getByUsername(currentUsername)
-                if (user != null) {
-                    val phone = editTxtPhone.text.toString()
-                    userController.changePhone(user, phone)
-                    cleanScreen()
-                    Toast.makeText(this, R.string.MsgPhoneUpdated, Toast.LENGTH_LONG).show()
-                    finish()
-                }
-            }else
-                Toast.makeText(this, R.string.MsgMissingData
+        lifecycleScope.launch {
+            try {
+                if(isValidatedData()){
+                    val currentUsername = LoginActivity.currentUserName
+                    val user = userController.getByUsername(currentUsername)
+                    if (user != null) {
+                        val phone = editTxtPhone.text.toString()
+                        userController.changePhone(user, phone)
+                        cleanScreen()
+                        Toast.makeText(myContext, R.string.MsgPhoneUpdated, Toast.LENGTH_LONG).show()
+                        finish()
+                    }
+                }else
+                    Toast.makeText(myContext, R.string.MsgMissingData
+                        , Toast.LENGTH_LONG).show()
+            }catch (e: Exception){
+                Toast.makeText(myContext, e.message.toString()
                     , Toast.LENGTH_LONG).show()
-        }catch (e: Exception){
-            Toast.makeText(this, e.message.toString()
-                , Toast.LENGTH_LONG).show()
+            }
         }
+
     }
 
     fun isValidatedData(): Boolean{
@@ -77,15 +85,17 @@ class ChangePhoneActivity : AppCompatActivity() {
     }
 
     fun loadCurrentPhone(){
-        try {
-            val currentUsername = LoginActivity.currentUserName
-            val user = userController.getByUsername(currentUsername)
-            if (user != null) {
-                txtViewCurrentPhone.setText(user.PhoneNumber)
+        lifecycleScope.launch {
+            try {
+                val currentUsername = LoginActivity.currentUserName
+                val user = userController.getByUsername(currentUsername)
+                if (user != null) {
+                    txtViewCurrentPhone.setText(user.PhoneNumber)
+                }
+            }catch (e: Exception){
+                Toast.makeText(myContext, e.message.toString()
+                    , Toast.LENGTH_LONG).show()
             }
-        }catch (e: Exception){
-            Toast.makeText(this, e.message.toString()
-                , Toast.LENGTH_LONG).show()
         }
     }
 }
