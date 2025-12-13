@@ -2,6 +2,7 @@ package com.example.proyectoprogramadoi
 
 import Controller.ContactController
 import Entity.EmergencyContact
+import android.content.Context
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText
@@ -13,7 +14,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.lifecycle.lifecycleScope
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import kotlinx.coroutines.launch
 import java.lang.Exception
 
 class EmergencyContactActivity : AppCompatActivity() {
@@ -25,6 +28,7 @@ class EmergencyContactActivity : AppCompatActivity() {
     private lateinit var editTxtPhoneC3: EditText
     private var isEditMode: Boolean = false
     private lateinit var contactController: ContactController
+    lateinit var myContext: Context
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,8 +48,10 @@ class EmergencyContactActivity : AppCompatActivity() {
         editTxtPhoneC1 = findViewById<EditText>(R.id.editTxtPhoneC1)
         editTxtPhoneC2 = findViewById<EditText>(R.id.editTxtPhoneC2)
         editTxtPhoneC3 = findViewById<EditText>(R.id.editTxtPhoneC3)
+        myContext = this
 
         val nombreUsuario = LoginActivity.currentUserName
+
         loadContacts(nombreUsuario)
 
         val btnSaveContact1 = findViewById<TextView>(R.id.btnSaveContact1)
@@ -148,33 +154,35 @@ class EmergencyContactActivity : AppCompatActivity() {
     fun saveContact(editTxtNameC: EditText, editTxtPhoneC: EditText, nombreUsuario: String){
         try {
             if (isValidatedData(editTxtNameC, editTxtPhoneC)){
-                if (isEditMode==false && contactController.getEContactsByN(editTxtNameC.text.toString()) != null){
-                    Toast.makeText(this, R.string.MsgDuplicatedContact
-                        , Toast.LENGTH_LONG).show()
-                }else if(contactController.getEContactsByP(editTxtPhoneC.text.toString()) != null){
-                    Toast.makeText(this, R.string.MsgDuplicatedNumberC
-                        , Toast.LENGTH_LONG).show()
-                } else{
-                    val contact = EmergencyContact()
-                    val nom = editTxtNameC.text.toString()
-                    val num = editTxtPhoneC.text.toString()
-                    contact.Name = nom
-                    contact.PhoneNumber = num
-                    contact.NameUser = nombreUsuario
-                    if (!isEditMode) {
-                        contactController.addC(contact)
-                        editTxtNameC.setText(nom)
-                        editTxtPhoneC.setText(num)
-                    }else {
-                        contactController.updateC(contact)
-                        editTxtNameC.setText(nom)
-                        editTxtPhoneC.setText(num)
-                        isEditMode = false
+                lifecycleScope.launch {
+                    if (isEditMode==false && contactController.getEContactsByN(editTxtNameC.text.toString()) != null){
+                        Toast.makeText(myContext, R.string.MsgDuplicatedContact
+                            , Toast.LENGTH_LONG).show()
+                    }else if(contactController.getEContactsByP(editTxtPhoneC.text.toString()) != null){
+                        Toast.makeText(myContext, R.string.MsgDuplicatedNumberC
+                            , Toast.LENGTH_LONG).show()
+                    } else{
+                        val contact = EmergencyContact()
+                        val nom = editTxtNameC.text.toString()
+                        val num = editTxtPhoneC.text.toString()
+                        contact.Name = nom
+                        contact.PhoneNumber = num
+                        contact.NameUser = nombreUsuario
+                        if (!isEditMode) {
+                            contactController.addC(contact)
+                            editTxtNameC.setText(nom)
+                            editTxtPhoneC.setText(num)
+                        }else {
+                            contactController.updateC(contact)
+                            editTxtNameC.setText(nom)
+                            editTxtPhoneC.setText(num)
+                            isEditMode = false
+                        }
+                        editTxtNameC.isEnabled=false
+                        editTxtPhoneC.isEnabled=false
+                        Toast.makeText(myContext, R.string.MsgSaveSuccess
+                            , Toast.LENGTH_LONG).show()
                     }
-                    editTxtNameC.isEnabled=false
-                    editTxtPhoneC.isEnabled=false
-                    Toast.makeText(this, R.string.MsgSaveSuccess
-                        , Toast.LENGTH_LONG).show()
                 }
             }else{
                 Toast.makeText(this, R.string.MsgMissingData
@@ -187,19 +195,25 @@ class EmergencyContactActivity : AppCompatActivity() {
     }
 
     fun deleteContact(editTxtNameC: EditText, editTxtPhoneC: EditText){
-        try {
-            if (editTxtNameC.text.trim().toString().isNotEmpty() && editTxtPhoneC.text.trim().toString().isNotEmpty()) {
-                contactController.removeC(editTxtNameC.text.trim().toString())
-                cleanScreen(editTxtNameC, editTxtPhoneC)
-                editTxtNameC.isEnabled=true
-                editTxtPhoneC.isEnabled=true
+        lifecycleScope.launch {
+            try {
+                if (editTxtNameC.text.trim().toString().isNotEmpty() && editTxtPhoneC.text.trim()
+                        .toString().isNotEmpty()
+                ) {
+
+                    contactController.removeC(editTxtNameC.text.trim().toString())
+                    cleanScreen(editTxtNameC, editTxtPhoneC)
+                    editTxtNameC.isEnabled = true
+                    editTxtPhoneC.isEnabled = true
+                    Toast.makeText(
+                        myContext, getString(R.string.MsgDeleteSuccess), Toast.LENGTH_LONG
+                    ).show()
+                }
+            } catch (e: Exception) {
                 Toast.makeText(
-                    this, getString(R.string.MsgDeleteSuccess), Toast.LENGTH_LONG
+                    myContext, e.message.toString(), Toast.LENGTH_LONG
                 ).show()
             }
-        }catch (e: Exception){
-            Toast.makeText(this, e.message.toString()
-                , Toast.LENGTH_LONG).show()
         }
     }
 
@@ -209,47 +223,49 @@ class EmergencyContactActivity : AppCompatActivity() {
     }
 
     fun loadContacts(nombreUsuario: String) {
-        try {
-            val contacts = contactController.getEContactsByU(nombreUsuario)
+        lifecycleScope.launch{
+            try {
+                val contacts = contactController.getEContactsByU(nombreUsuario)
 
-            // Contacto 1
-            if (contacts.size >= 1) {
-                val contact = contacts[0]
-                findViewById<ConstraintLayout>(R.id.clContact1).visibility = View.VISIBLE
-                editTxtNameC1.setText(contact.Name)
-                editTxtPhoneC1.setText(contact.PhoneNumber)
-                editTxtNameC1.isEnabled = false
-                editTxtPhoneC1.isEnabled = false
-            }else {
-                findViewById<ConstraintLayout>(R.id.clContact1).visibility = View.INVISIBLE
+                // Contacto 1
+                if (contacts.size >= 1) {
+                    val contact = contacts[0]
+                    findViewById<ConstraintLayout>(R.id.clContact1).visibility = View.VISIBLE
+                    editTxtNameC1.setText(contact.Name)
+                    editTxtPhoneC1.setText(contact.PhoneNumber)
+                    editTxtNameC1.isEnabled = false
+                    editTxtPhoneC1.isEnabled = false
+                }else {
+                    findViewById<ConstraintLayout>(R.id.clContact1).visibility = View.INVISIBLE
+                }
+
+                // Contacto 2
+                if (contacts.size >= 2) {
+                    val contact = contacts[1]
+                    findViewById<ConstraintLayout>(R.id.clContact2).visibility = View.VISIBLE
+                    editTxtNameC2.setText(contact.Name)
+                    editTxtPhoneC2.setText(contact.PhoneNumber)
+                    editTxtNameC2.isEnabled = false
+                    editTxtPhoneC2.isEnabled = false
+                }else {
+                    findViewById<ConstraintLayout>(R.id.clContact2).visibility = View.INVISIBLE
+                }
+
+                // Contacto 3
+                if (contacts.size >= 3) {
+                    val contact = contacts[2]
+                    findViewById<ConstraintLayout>(R.id.clContact3).visibility = View.VISIBLE
+                    editTxtNameC3.setText(contact.Name)
+                    editTxtPhoneC3.setText(contact.PhoneNumber)
+                    editTxtNameC3.isEnabled = false
+                    editTxtPhoneC3.isEnabled = false
+                }else {
+                    findViewById<ConstraintLayout>(R.id.clContact3).visibility = View.INVISIBLE
+                }
+
+            } catch (e: Exception) {
+                Toast.makeText(myContext, e.message, Toast.LENGTH_LONG).show()
             }
-
-            // Contacto 2
-            if (contacts.size >= 2) {
-                val contact = contacts[1]
-                findViewById<ConstraintLayout>(R.id.clContact2).visibility = View.VISIBLE
-                editTxtNameC2.setText(contact.Name)
-                editTxtPhoneC2.setText(contact.PhoneNumber)
-                editTxtNameC2.isEnabled = false
-                editTxtPhoneC2.isEnabled = false
-            }else {
-                findViewById<ConstraintLayout>(R.id.clContact2).visibility = View.INVISIBLE
-            }
-
-            // Contacto 3
-            if (contacts.size >= 3) {
-                val contact = contacts[2]
-                findViewById<ConstraintLayout>(R.id.clContact3).visibility = View.VISIBLE
-                editTxtNameC3.setText(contact.Name)
-                editTxtPhoneC3.setText(contact.PhoneNumber)
-                editTxtNameC3.isEnabled = false
-                editTxtPhoneC3.isEnabled = false
-            }else {
-                findViewById<ConstraintLayout>(R.id.clContact3).visibility = View.INVISIBLE
-            }
-
-        } catch (e: Exception) {
-            Toast.makeText(this, e.message, Toast.LENGTH_LONG).show()
         }
     }
 

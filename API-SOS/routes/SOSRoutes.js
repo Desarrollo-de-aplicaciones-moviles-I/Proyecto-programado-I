@@ -30,7 +30,7 @@ module.exports = function (app){
     app.route('/contact')
         .post(contact.create);
 
-    app.route('/contact/:name')
+    app.route('/contact')
         .put(contact.update)
 
     app.route('/contact/:name')

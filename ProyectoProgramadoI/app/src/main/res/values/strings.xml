@@ -89,5 +89,7 @@
     <string name="MsgAlertSuccessfully">Alerta enviada satisfactoriamente</string>
     <string name="MsgAddContactFirst">Debes agregar un contacto primero</string>
     <string name="MsgAddAlertFirst">Primero debes añadir una alerta</string>
+    <string name="ErrorMsgUpdPhone">Error al actualizar el teléfono</string>
+
 
 </resources>

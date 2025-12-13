@@ -4,7 +4,7 @@ import java.time.LocalDateTime
 
 class Alert {
     private var idAlert: Int=0
-    private lateinit var dateAlert: LocalDateTime
+    private var dateAlert: LocalDateTime? = null
     private var message: String? = null
     private var latitude: Int=0
     private var longitude: Int=0
@@ -26,7 +26,7 @@ class Alert {
         get() = this.idAlert
         set(value) {this.idAlert=value}
 
-    var DateAlert: LocalDateTime
+    var DateAlert: LocalDateTime?
         get() = this.dateAlert
         set(value) {this.dateAlert=value}
 

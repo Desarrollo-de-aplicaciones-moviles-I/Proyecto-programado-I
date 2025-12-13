@@ -90,5 +90,6 @@
     <string name="MsgAlertSuccessfully">Alert sent succesfully</string>
     <string name="MsgAddContactFirst">You have to add a contact first</string>
     <string name="MsgAddAlertFirst">You have to add an alert first</string>
+    <string name="ErrorMsgUpdPhone">Error when updating the phone</string>
 
 </resources>

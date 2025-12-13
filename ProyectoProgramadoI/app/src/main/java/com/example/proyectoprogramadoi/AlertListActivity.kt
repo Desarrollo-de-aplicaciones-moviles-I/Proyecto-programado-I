@@ -2,6 +2,7 @@ package com.example.proyectoprogramadoi
 
 import Controller.AlertController
 import Entity.Alert
+import Entity.DTOAlert
 import Interfaces.OnItemClickListener
 import android.os.Bundle
 import android.view.View
@@ -10,12 +11,15 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.coroutines.launch
 
 class AlertListActivity : AppCompatActivity(), OnItemClickListener {
     private lateinit var alertController: AlertController
     val nombreUsuario = LoginActivity.currentUserName
+    lateinit var myContext: OnItemClickListener
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,14 +31,19 @@ class AlertListActivity : AppCompatActivity(), OnItemClickListener {
             insets
         }
 
+        myContext = this
+
         alertController = AlertController(this)
-        val alerts = alertController.getAlertByU(nombreUsuario)
-        val recycler =  findViewById<RecyclerView>(R.id.rvAlertH)
-        val customAdapter = AlertListAdapter(alerts, this)
-        val layoutManager = LinearLayoutManager(applicationContext)
-        recycler.layoutManager = layoutManager
-        recycler.adapter = customAdapter
-        customAdapter.notifyDataSetChanged()
+        lifecycleScope.launch {
+            val alerts = alertController.getAlertByU(nombreUsuario)
+            val recycler =  findViewById<RecyclerView>(R.id.rvAlertH)
+            val customAdapter = AlertListAdapter(alerts, myContext)
+            val layoutManager = LinearLayoutManager(applicationContext)
+            recycler.layoutManager = layoutManager
+            recycler.adapter = customAdapter
+            customAdapter.notifyDataSetChanged()
+        }
+
 
         val btnHomeEC = findViewById<ImageButton>(R.id.btnHomeEC)
         btnHomeEC.setOnClickListener(View.OnClickListener{ view ->
@@ -48,7 +57,7 @@ class AlertListActivity : AppCompatActivity(), OnItemClickListener {
 
     }
 
-    override fun onItemClicked(alert: Alert) {
+    override fun onItemClicked(alert: DTOAlert) {
         Util.Util.openActivity(this, AlertActivity::class.java
         )
     }

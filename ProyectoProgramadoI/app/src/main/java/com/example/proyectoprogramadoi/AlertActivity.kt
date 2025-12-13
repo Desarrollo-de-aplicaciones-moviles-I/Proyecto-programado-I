@@ -3,7 +3,9 @@ package com.example.proyectoprogramadoi
 import Controller.AlertController
 import Controller.ContactController
 import Entity.Alert
+import Entity.DTOEmergencyContact
 import Entity.EmergencyContact
+import android.content.Context
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -14,7 +16,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.lifecycle.lifecycleScope
 import com.google.android.material.textfield.TextInputEditText
+import kotlinx.coroutines.launch
 import java.lang.Exception
 import java.time.LocalDateTime
 
@@ -26,6 +30,7 @@ class AlertActivity : AppCompatActivity() {
     private lateinit var txtViewNameC2: TextView
     private lateinit var txtViewNameC3: TextView
     val nombreUsuario = LoginActivity.currentUserName
+    lateinit var myContext: Context
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,6 +49,7 @@ class AlertActivity : AppCompatActivity() {
         txtViewNameC1 = findViewById<TextView>(R.id.txtViewNameC1)
         txtViewNameC2 = findViewById<TextView>(R.id.txtViewNameC2)
         txtViewNameC3 = findViewById<TextView>(R.id.txtViewNameC3)
+        myContext = this
 
         loadContacts()
 
@@ -64,23 +70,25 @@ class AlertActivity : AppCompatActivity() {
     }
 
     fun saveAlert(){
-        try {
-            val generatedID = alertController.createID()
-            val alert = Alert()
-            alert.DateAlert= LocalDateTime.now()
-            alert.IdAlert = generatedID
-            alert.Message = txtInputCMessage.text.toString()
-            alert.Latitude = 1 //de momento
-            alert.Longitude = 1 //de momento también
-            alert.IdUser = nombreUsuario
-            alertController.addA(alert)
-            cleanScreen()
-            finish()
-            Toast.makeText(this, R.string.MsgAlertSuccessfully
-                , Toast.LENGTH_LONG).show()
-        }catch (e: Exception){
-            Toast.makeText(this, e.message.toString()
-                , Toast.LENGTH_LONG).show()
+        lifecycleScope.launch {
+            try {
+                val generatedID = alertController.createID()
+                val alert = Alert()
+                alert.DateAlert= LocalDateTime.now()
+                alert.IdAlert = generatedID
+                alert.Message = txtInputCMessage.text.toString()
+                alert.Latitude = 1 //de momento
+                alert.Longitude = 1 //de momento también
+                alert.IdUser = nombreUsuario
+                alertController.addA(alert)
+                cleanScreen()
+                finish()
+                Toast.makeText(myContext, R.string.MsgAlertSuccessfully
+                    , Toast.LENGTH_LONG).show()
+            }catch (e: Exception){
+                Toast.makeText(myContext, e.message.toString()
+                    , Toast.LENGTH_LONG).show()
+            }
         }
     }
 
@@ -89,18 +97,21 @@ class AlertActivity : AppCompatActivity() {
     }
 
     private fun loadContacts() {
-        val contacts = contactController.getEContactsByU(nombreUsuario)
+        lifecycleScope.launch {
+            val contacts = contactController.getEContactsByU(nombreUsuario)
 
-        fun showContact(contact: EmergencyContact?, textView: TextView) {
-            if (contact != null) {
-                textView.visibility = View.VISIBLE
-                textView.text = "${contact.Name} (${contact.PhoneNumber})"
+            fun showContact(contact: DTOEmergencyContact?, textView: TextView) {
+                if (contact != null) {
+                    textView.visibility = View.VISIBLE
+                    textView.text = "${contact.Name} (${contact.PhoneNumber})"
+                }
             }
-        }
 
-        showContact(contacts.getOrNull(0), txtViewNameC1)
-        showContact(contacts.getOrNull(1), txtViewNameC2)
-        showContact(contacts.getOrNull(2), txtViewNameC3)
+            showContact(contacts.getOrNull(0), txtViewNameC1)
+            showContact(contacts.getOrNull(1), txtViewNameC2)
+            showContact(contacts.getOrNull(2), txtViewNameC3)
+
+        }
     }
 
 }
